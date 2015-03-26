@@ -52,14 +52,6 @@
     </developers>
 
 
-    <issueManagement>
-        <system>redmine</system>
-        <url>https://redmine.emergya.es/projects/sir-gore-chile</url>
-    </issueManagement>
-    <ciManagement>
-        <system>jenkins</system>
-        <url>http://jenkins.emergya.es/jenkins/view/sirdelgore/</url>
-    </ciManagement>
     <inceptionYear>2012</inceptionYear>
     <!-- Project Information -->
 
