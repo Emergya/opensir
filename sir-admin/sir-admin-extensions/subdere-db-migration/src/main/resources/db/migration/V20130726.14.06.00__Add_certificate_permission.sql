@@ -1,0 +1,1 @@
+insert into ohiggins.gis_permission(id, name, ptype, config) values (22, 'Certificados municipales', 'gxp_localcertificates', null);

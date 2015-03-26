@@ -1,0 +1,93 @@
+/**
+ * Copyright (C) 2012
+ *
+ * This file is part of the project ohiggins
+ *
+ * This software is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option) any
+ * later version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this library; if not, write to the Free Software Foundation, Inc., 51
+ * Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ *
+ * As a special exception, if you link this library with other files to produce
+ * an executable, this library does not by itself cause the resulting executable
+ * to be covered by the GNU General Public License. This exception does not
+ * however invalidate any other reasons why the executable file might be covered
+ * by the GNU General Public License.
+ *
+ * Author: Luis Román <lroman@emergya.com>
+ */
+
+/* Styles to position the chart so they fill the avalaible area*/
+.vw_chart_window .x-column,
+ .vw_chart_window .x-column-inner,
+ .vw_chart_window .x-box-inner,
+ .vw_chart_window .chart,
+ .vw_chart_window  .x-panel-bwrap,
+ .vw_chart_window .x-panel-body {
+ 	height: 100%;
+ 	width: 100%;
+ }
+
+
+.vw_chart_window .chart .x-panel-bwrap {
+	position: relative;
+}
+
+.vw_chart_window .chart .x-panel-body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 44px;
+	height: auto;	
+}
+ 
+
+.vw_chart_window .x-form {
+	overflow-y: auto;
+	padding-left: 15px;
+}
+
+.vw_chart_window .x-form-field {
+	width: 180px;
+}
+
+.vw_chart_window .x-box-item {
+	width :100% !important;
+}
+
+
+.vw_chart_window .chart,
+.vw_chart_window .smallChart {
+	background: white;
+}
+
+ .vw_chart_window .chart .x-panel-footer {
+ 	position: absolute;
+ 	right:0;
+ 	bottom: 0;
+ 	width: 275px;
+ }
+
+/* Styles to ensure the customer requested combo options list width*/
+.vw_chart_window_combo_list,
+.vw_chart_window_combo_list .x-combo-list-inner,
+.vw_chart_window_combo_list .x-combo-list-item {
+	width: auto !important;
+	min-width: 198px;
+}
+
+.vw_chart_window .chartLoading {
+	position:absolute;
+	top: 10;
+	left:10;
+	z-index: 1000000;
+}

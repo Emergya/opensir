@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <title>Ingreso Sistema de Gestión Regional</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+  
+  <script language="JavaScript" src="include/inicial.js"></script>
+  <script language="JavaScript" src="include/md5.js"></script>
+  <script language="JavaScript" src="index.js"></script>
+  <script language="JavaScript" src="include/procesos_comunes.js"></script>
+  <!-- // <script type="text/javascript" src="lightbox/prototype.js"></script> -->
+  <!-- // <script type="text/javascript" src="lightbox/scriptaculous.js?load=effects,builder"></script> -->
+  <!-- // <script type="text/javascript" src="lightbox/lightbox.js"></script> -->
+  <!-- // <script type="text/javascript" src="lightbox/shadowbox.js"></script> -->
+  <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/ie7.css">
+<![endif]-->
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.tipsy.js"></script>
+  <script src="../js/vendor/modernizr-2.6.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.colorbox-min.js"></script>
+
+  <link rel="stylesheet" href="../css/colorbox1/colorbox.css">
+  <link rel="stylesheet" href="css/estilos1.css" type="text/css">
+  <link rel="stylesheet" href="css/estilos1.css" type="text/css">
+  <link rel="stylesheet" href="css/formularios.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="lightbox/shadowbox.css">
+  <link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" media="screen" />
+  
+  <link rel="stylesheet" href="../css/normalize.min.css">
+  <link href="../css/main.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../css/tipsy.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="../css/lte_ie8.css">
+  <![endif]-->
+
+  <!--[if IE 9]>
+    <link rel="stylesheet" href="../css/ie9.css">
+  <![endif]-->
+
+  <script type="text/javascript" src="/js/portada.js"></script>
+  
+  <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".colorbox").colorbox({inline:true, width:"450px", fixed: true});
+      $(".cboxElement").colorbox({iframe:true,width:"100%",height:"100%",preloading:true,title:false});
+    });
+  </script>
+
+</head>
+<body>
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    
+  <header>
+    <hgroup>
+      <div id="logo-gob"><img src="../img/logo.png" alt="Subsecretaria de Desarrollo Regional y Administrativo"></div>
+      <h1>Sistema de Información Territorial para las Regiones de Chile</h1>
+      <div id="logo-chileindica"><img src="../img/logo_chileindica.png" width="120px" height="80px" alt="Chileindica"></div>
+    </hgroup>
+    <nav>
+      <ul>
+        <li class="first"><a href="../index.php">Home</a></li>
+        <li><a href="../que_es_chileindica.php">¿Qué es Chileindica?</a></li>
+        <li><a href="../comoopera.php">¿Cómo opera?</a></li>
+        <li class="last"><a href="../contacto.php">Contacto</a></li>
+      </ul>
+    </nav>  
+  </header>
+  <section>    
+    
+    
+    <form style="float:left;margin-left:48px"  action="" id="formulario_index" name="formulario_index" method="post">
+
+
+
+      <div class="titulo">
+        <span class="left"> </span>
+        <h1>INGRESO | <span>Región de Arica y Parinacota</span></h1>
+        <span class="right"> </span>
+      </div>
+      <div class="content">
+        
+        <div class="logo">
+          <img src="logos/logo.jpg" alt="Gobierno Regional">
+        </div>
+        
+        <div class="form">
+          
+          <div class="row usuario">
+            <label for="e_usuario">Usuario</label>
+            <input name="e_usuario" type="text" class="" value="" maxlength="20" size="8" title="Digite su nombre de usuario"> 
+          </div>
+          
+          <div class="row password">
+            <label for="e_clave">Contraseña</label>
+            <input name="e_clave" type="password" class=""  onkeyUp="acceso_s()" value="" maxlength="15" id="Password1" size="8" title="Digite su contraseña"> 
+          </div>
+          
+          <div class="row btn-acceso">
+            <input name="b_acceso" type="button" class="" id="b_acceso" value="Acceso Sistema" onClick="verifica_login(1);" title="Esta opción permite acceder al menú de opciones del sistema">
+          </div>
+          
+          <div class="row cambiar_passwd">
+            <a href="#formcambio" class="colorbox">Cambiar Contraseña</a>
+          </div>
+          
+          <div class="row admin">
+            <a class="btn_admin" href="#" onClick="verifica_login(9);">Administración&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+            <a class="btn_home" href="../index.php#">Volver al Home</a>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="nnumero" value="">
+      <input type="hidden" name="usuario" value="">
+      <input type="hidden" name="id_usuario" value="">
+      <input type="hidden" name="rut_usuario" value="">
+      <input type="hidden" name="email_usuario" value="">
+      <input type="hidden" name="uscl" value="">
+      <input type="hidden" name="cambio_ok" value="">
+    </form>
+    <div id="access_sir">                
+      <div id="enc_sir">Acceso SIR</div>
+      <div id="content_sir">        
+        <div class="item_sir">
+          <a class="iframe cboxElement" title="Módulo Cartográfico" alt="Módulo Cartográfico" href="/sir-arica/moduloCartografico">
+            <img src="botones/b_cartografico.jpg"/>
+            <span>Módulo Cartográfico<span>
+          </a>
+        </div>
+        <div class="item_sir">
+          <a class="iframe cboxElement" title="Repositorio Estudios" alt="Repositorio Estudios" href="/sir-arica/repositorioEstudios/">              
+            <img src="botones/b_estudios.jpg"/>
+            <span>Repositorio Estudios</span>
+          </a>
+        </div>
+        <div class="item_sir">
+          <a class="iframe cboxElement" title="Analítico Estadístico" alt="Analítico Estadístico" href="/sir-arica/moduloAnaliticoEstadistico/">
+            <img src="botones/b_datos.jpg"/>
+            <span>Analítico Estadístico</span>
+          </a>    
+        </div>                        
+      </div>  
+    </div>
+  </section>
+  <footer>
+<div id="footer" style="white-space: nowrap;font-size:0.90em;clear:both">
+      Chileindica - Sistema de Información e Inversión Territorial&nbsp; |&nbsp; Morandé 115 Piso 11, Santiago-Chile 
+      &nbsp;|&nbsp; Teléfono Mesa Central: (2) 636 36 00
+    </div>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25975414-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </footer>
+  <iframe id="ilogin" name="ilogin" src="" frameborder="0" width="0%" height="0px" ></iframe>
+  <div id="cambio" style="display: none;">
+    <form style="display:inline" name="formcambio" id="formcambio" method="post" action="">
+      <h2>Cambio de Clave</h2>
+      <div class="content">
+        <div class="row">
+          <label for="usuario1">Usuario</label>
+           <input class="texto" name="usuario1" type="text" id="usuario1" size="23" maxlength="16" title="Digite su nombre de usuario">
+        </div>
+        <div class="row">
+          <label for="clave">Contraseña Actual</label>
+          <input class="texto" name="clave1" type="password" id="clave1" size="23" maxlength="16" title="Digite su contraseña actual">
+        </div>
+        <div class="row">
+          <label for="clave2">Nueva Contraseña</label>
+          <input class="texto" name="clave2" type="password"  id="clave2" size="23" maxlength="14" title="Digite su nueva contraseña">
+        </div>
+        <div class="row">
+          <label for="clave22">Nueva Conatraseña (Repetir)</label>
+          <input class="texto" name="clave22" type="password" id="clave22" size="23" maxlength="14" title="Digite nuevamente su nueva contraseña">
+        </div>
+        <div class="row accion">
+          <input name="grabar" type="button"onClick="cambiar_clave();limpia_textoclave();" value="Grabar cambio" title="Graba la nueva contraseña en la base de datos">
+          <input name="cancelar" type="button" onClick="$.colorbox.close();" value="    Cancelar    " title="Cancela el proceso de cambio de clave">
+        </div>
+      </div>
+      <input type="hidden" name="nnumero" value="">
+    </form>    
+  </div>
+  </body>
+</html>

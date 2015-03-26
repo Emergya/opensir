@@ -1,0 +1,1 @@
+ALTER SEQUENCE ohiggins.gis_user_seq RESTART WITH 20;

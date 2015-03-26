@@ -1,0 +1,118 @@
+<!-- GeoExplorer resources -->
+<link rel="stylesheet" type="text/css" href="../theme/app/geoexplorer.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="../theme/app/ie.css"/>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../theme/ux/colorpicker/color-picker.ux.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/ohiggins.css" />
+<script type="text/javascript" src="../script/GeoExplorer.js"></script>
+
+<!-- PrintPreview resources -->
+<link rel="stylesheet" type="text/css" href="../externals/PrintPreview/resources/css/printpreview.css">
+
+<!-- Ux resources -->
+<link rel="stylesheet" type="text/css" href="../theme/ux/colorpicker/color-picker.ux.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/ext.ux/gridfilters/css/RangeMenu.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/ext.ux/gridfilters/css/GridFilters.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/PointInformation.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/ScaleSelector.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/wfswizard/css/WfsWizard.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/WMSGetFeatureInfo.css" />
+<link rel="stylesheet" type="text/css" href="../theme/ux/ChartWindow.css" />
+<link rel="stylesheet" type="text/css" href="../../css/blueprint/fonts/fonts.css" />
+
+<script  type="text/javascript">
+		// So markers are clickable in IE9-10: SVG renders but ain't clickable, and VML draws white rectangles.
+		// Canvas works correctly though.
+		OpenLayers.Layer.Vector.prototype.renderers = [ "Canvas", "VML","SVG2"];
+
+		// So IE<10 doesn't fail if console.debug or console.log is used.
+		if(typeof console == "undefined") {
+		    console = {
+		        debug: function(){},
+		        log: function(){},
+		        warn: function(){},
+		        error: function(){}
+		    }
+		} else if (!console.debug) {
+		    console.debug = function(text) {
+		        console.log(text);
+		    }
+		}
+
+        // optionally set locale based on query string parameter
+        if (GeoExt.Lang) {
+            GeoExt.Lang.set(OpenLayers.Util.getParameters()["locale"] || GeoExt.Lang.locale);
+        }
+        Ext.BLANK_IMAGE_URL = "../theme/app/img/blank.gif";
+        OpenLayers.ImgPath = "../theme/app/img/";
+        // optionally set locale based on query string parameter
+        if (GeoExt.Lang) {
+            GeoExt.Lang.set(OpenLayers.Util.getParameters()["locale"] || GeoExt.Lang.locale);
+        }
+
+        var geoserverBaseUrl = "http://subdere-sir.emergya.es/geoserver";
+
+
+        var app = new GeoExplorer.Composer({
+            authStatus: {{status}},
+            proxy: "../proxy/?url=",
+            printService: geoserverBaseUrl+"/pdf/",
+            about: {
+                title: "GORE Arica y Parinacota - Módulo Cartográfico",
+                "abstract": "GORE Arica y Parinacota - Módulo Cartográfico",
+                contact: ""
+            },
+            defaultSourceType: "gxp_wmscsource",
+            sources: {
+                local: {
+                    url: geoserverBaseUrl+"/ows",
+                    title: "GeoServer Local",
+                    ptype: "gxp_wmscsource"
+                },
+                osm: {
+                    ptype: "gxp_osmsource",
+                    hidden: true
+                },
+                google: {
+                    ptype: "gxp_googlesource",
+                    hidden: true
+                }
+            },
+            map: {
+                projection: "EPSG:900913",
+                layers: [{
+                    source: "local",
+                    title: "Comunas",
+                    name: "gore:comunas",
+                    group: "default",
+                    args: {
+                        tiled: true
+                    }
+                },{
+                    source: "osm",
+                    title: "OpenStreetMap",
+                    name: "mapnik",
+                    group: "background"
+
+                },
+                {
+                    source: "google",
+                    title: "Google Satellite",
+                    name: "SATELLITE",
+                    group: "background"
+                },
+                {
+                    source: "google",
+                    title: "Google Terrain",
+                    name: "TERRAIN",
+                    group: "background",
+                    args: {
+                            "baseLayer":true
+                    }
+                }],
+                center: [-7792364, -2113330],
+                zoom: 8
+            }
+        });
+    </script>

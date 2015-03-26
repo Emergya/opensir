@@ -1,0 +1,2110 @@
+@charset 'UTF-8';
+@import  url(MakeLayerPersistent.css);
+@import url(ExportLayer.css);
+@import url(EditionTools.css);
+@import url(InformationTools.css);
+
+ /* Icons and text */
+/* left */
+.x-btn-text-icon .x-btn-icon-small-left .x-btn-text{
+  font:bold 14px 'gobclbold', Helvetica, Arial, sans-serif;
+  color: #086db3;
+  height:24px;
+	padding-left:10px;
+	padding-right:20px;
+	background:url(img/flecha-der.png) no-repeat 100% 50%;
+}
+
+/** In windows, buttons wont have icons nor other customizations */
+.x-window .x-btn-text-icon .x-btn-icon-small-left .x-btn-text {    
+  font: normal 11px arial,tahoma,verdana,helvetica;
+  color: #383738;
+  height: 25px !important;
+  display: inline-block;
+  padding: 0 10px !important;
+  text-transform: uppercase;
+  line-height: 15px;
+  border: 1px solid #C3C3C1;
+  background: #F3F3F3 !important;
+  width: auto !important;
+}
+
+.x-toolbar .x-toolbar-cell {
+    vertical-align:middle;
+    background: #fcfcfc; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top bottom,  #fcfcfc 0%,#eeeeee 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */
+}
+
+
+.x-toolbar .x-toolbar-cell:last-child {}
+
+.x-panel-body .x-toolbar-left .x-btn{border: none;}
+
+.x-toolbar-left .x-btn-icon:hover, .x-btn-icon.x-btn-pressed { background: #FF8700 !important;}
+.x-toolbar-left .x-item-disabled.x-btn:hover{ background: inherit !important;}
+
+#storedsearchestbar,
+#informationtbar,
+#editiontbar,
+#importexporttbar{
+	position:absolute;
+	top:10px;
+	left:10px;
+	padding:0 !important;
+	margin:0 !important;
+	z-index:9999;
+  padding: 3px 5px;
+  border: 1px #807F80 solid;
+  border-width: 1px 0 0 0;
+}
+
+#storedsearchestbar .x-toolbar-left,
+#informationtbar .x-toolbar-left,
+#editiontbar .x-toolbar-left,
+#importexporttbar .x-toolbar-left{
+	padding:0 !important;
+	margin:0 !important;}
+	
+.x-panel-tbar {
+    height: 46px !important;
+}
+
+/* From xtheme-gray.css*/
+.x-toolbar{
+	border-top:none !important;
+    background:transparent;
+}
+
+
+.x-toolbar-right-row .x-btn-pressed,
+.x-toolbar-right-row .x-btn-over{
+    border: none !important;
+    background: none !important;
+}
+
+
+
+/* From ohiggins.css*/
+
+* {
+  font-family: 'gobclregular' !important;
+}
+
+body {
+  font-family: 'gobclregular' !important;
+  font-weight: normal !important;
+  background:#fafafa url(img/body-pattern.jpg);
+}
+
+.x-panel-noborder .x-panel-tbar-noborder .x-toolbar {border-bottom:none;}
+.x-panel-body {background:transparent !important}
+
+
+
+/** Overwrite GeoExplorer icons **/
+
+
+/* Zoom más */
+.x-btn .gxp-icon-zoom-in, 
+.x-tree-node .gxp-icon-zoom-in {
+    background-image: url(img/icono-herramienta-zoom-mas.png);
+}
+
+  .x-btn-over .gxp-icon-zoom-in,
+  .x-btn-pressed .gxp-icon-zoom-in {
+      background-image: url(img/icono-herramienta-zoom-mas_over.png);
+  }
+
+
+/* Zoom menos */
+.x-btn .gxp-icon-zoom-out, 
+.x-tree-node .gxp-icon-zoom-out {
+    background-image: url(img/icono-herramienta-zoom-menos.png);
+}
+
+  .x-btn-over .gxp-icon-zoom-out,
+  .x-btn-pressed .gxp-icon-zoom-out {
+      background-image: url(img/icono-herramienta-zoom-menos_over.png);
+  }
+
+
+/* Vista anterior */
+.x-btn .gxp-icon-zoom-previous, 
+.x-tree-node .gxp-icon-zoom-previous {
+    background-image: url(img/icono-herramienta-vista-anterior.png);
+}
+
+  .x-btn-over .gxp-icon-zoom-previous, 
+  .x-btn-pressed .gxp-icon-zoom-previous {
+      background-image: url(img/icono-herramienta-vista-anterior_over.png);
+  }
+
+
+/* Vista siguiente */
+.x-btn .gxp-icon-zoom-next, 
+.x-tree-node .gxp-icon-zoom-next {
+    background-image: url(img/icono-herramienta-vista-siguiente.png);
+}
+
+  .x-btn-over .gxp-icon-zoom-next, 
+  .x-btn-pressed .gxp-icon-zoom-next {
+      background-image: url(img/icono-herramienta-vista-siguiente_over.png);
+  }
+
+
+/* Paneo */
+.x-btn .gxp-icon-pan, 
+.x-tree-node .gxp-icon-pan {
+    background-image: url(img/icono-herramienta-paneo.png);
+}
+
+  .x-btn-over .gxp-icon-pan, 
+  .x-btn-pressed .gxp-icon-pan {
+      background-image: url(img/icono-herramienta-paneo_over.png);
+  }
+
+
+
+/* Estilo */
+.x-btn .gxp-icon-palette,
+.x-menu-item .gxp-icon-palette,
+.x-tree-node .gxp-icon-palette {
+    background-image: url(img/icono_estilo.png);
+}
+
+
+/* Añadir capa */
+.x-btn .gxp-icon-addlayers,
+.x-menu-item .gxp-icon-addlayers,
+.x-tree-node .gxp-icon-addlayers {
+    background-image: url(img/icono-herramienta-anadir-capa.png);
+}
+
+  .x-btn-pressed .gxp-icon-addlayers,
+  .x-btn-over .gxp-icon-addlayers {
+      background-image: url(img/icono-herramienta-anadir-capa_over.png);
+  }
+
+
+/* Impresión PDF */
+.x-btn .gxp-icon-print {
+    background-image: url(img/icono_impresion_pdf.png);
+}
+
+
+
+/** OHiggins icons **/
+
+
+
+/* Vista inicial */
+.vw-icon-initial-view,
+.vw-icon-information-toolbar,
+.vw-icon-importexport-toolbar {
+    background-image: url(img/icono-herramienta-vista-inicial.png);
+}
+
+  .x-btn-pressed .vw-icon-initial-view,
+  .x-btn-over .vw-icon-initial-view,
+  .x-btn-pressed .vw-icon-information-toolbar,
+  .x-btn-over .vw-icon-information-toolbar,
+  .x-btn-pressed .vw-icon-importexport-toolbar,
+  .x-btn-over .vw-icon-importexport-toolbar {
+        background-image: url(img/icono-herramienta-vista-inicial_over.png);
+    }
+
+
+
+/* Edicion */
+.vw-icon-edition-toolbar {
+    background-image: url(img/icono-herramienta-edicion.png);
+}
+
+  .x-btn-pressed .vw-icon-edition-toolbar,
+  .x-btn-over .vw-icon-edition-toolbar {
+        background-image: url(img/icono-herramienta-edicion_over.png);
+    }
+
+
+/* Busqueda predeterminada */
+	
+	.vw-icon-ProyectosSEAStoredSearch {background-image: url(img/icono-centrales-aprobadas-seia.png);}
+	.x-btn-pressed .vw-icon-ProyectosSEAStoredSearch,
+	.x-btn-over .vw-icon-ProyectosSEAStoredSearch {background-image: url(img/icono-centrales-aprobadas-seia_over.png) !important;}
+	
+	.vw-icon-ProyectosSEACombustiblePotenciaStoredSearch {background-image: url(img/icono-centrales-aprobadas.png);}
+	.x-btn-pressed .vw-icon-ProyectosSEACombustiblePotenciaStoredSearch,
+	.x-btn-over .vw-icon-ProyectosSEACombustiblePotenciaStoredSearch {background-image: url(img/icono-centrales-aprobadas_over.png) !important;}
+	
+	.vw-icon-CentralesCombustibleStoredSearch {background-image: url(img/icono-centrales-combustible.png);}
+	.x-btn-pressed .vw-icon-CentralesCombustibleStoredSearch,
+	.x-btn-over .vw-icon-CentralesCombustibleStoredSearch {background-image: url(img/icono-centrales-combustible_over.png) !important;}
+	
+	.vw-icon-CentralesTipoStoredSearch {background-image: url(img/icono-tipos-centrales.png);}
+	.x-btn-pressed .vw-icon-CentralesTipoStoredSearch,
+	.x-btn-over .vw-icon-CentralesTipoStoredSearch {background-image: url(img/icono-tipos-centrales_over.png) !important;}
+	
+	.vw-icon-CentralesAmbitoStoredSearch {background-image: url(img/icono-centrales-region.png);}
+	.x-btn-pressed .vw-icon-CentralesAmbitoStoredSearch,
+	.x-btn-over .vw-icon-CentralesAmbitoStoredSearch {background-image: url(img/icono-centrales-region_over.png) !important;}
+	
+	.vw-icon-CentralesPotenciaStoredSearch {background-image: url(img/icono-potencia-centrales.png);}
+	.x-btn-pressed .vw-icon-CentralesPotenciaStoredSearch,
+	.x-btn-over .vw-icon-CentralesPotenciaStoredSearch {background-image: url(img/icono-potencia-centrales_over.png) !important;}
+
+
+
+/* Consultar coordenadas */
+.vw-icon-point-information {
+    background-image: url(img/icono-herramienta-consulta-coordenadas.png);
+}
+
+  .x-btn-pressed .vw-icon-point-information,
+  .x-btn-over .vw-icon-point-information {
+        background-image: url(img/icono-herramienta-consulta-coordenadas_over.png);
+    }
+
+
+.vw-icon-show-metadata {
+    background-image: url(img/icono-herramienta-calculadora-coordenadas.png);
+}
+
+ .x-btn-pressed .vw-icon-show-metadata,
+ ..x-btn-over .vw-icon-show-metadata {
+      background-image: url(img/icono-herramienta-calculadora-coordenadas_over.png);
+  }
+
+
+
+/* Seleccionar elemento */
+.vw-icon-select-item {
+    background-image: url(img/icono-herramienta-seleccionar-elemento.png);
+}
+
+  .x-btn-pressed .vw-icon-select-item,
+  .x-btn-over .vw-icon-select-item {
+      background-image: url(img/icono-herramienta-seleccionar-elemento_over.png);
+  }
+
+
+
+/* Crear buffer */
+.vw-icon-buffer {
+    background-image: url(img/icono-herramienta-crear-buffer.png);
+}
+
+  .x-btn-pressed .vw-icon-buffer,
+  .x-btn-over .vw-icon-buffer {
+      background-image: url(img/icono-herramienta-crear-buffer_over.png);
+  }
+
+
+
+/* Consulta coordenadas */
+.vw-icon-new-item-from-coords {
+    background-image: url(img/icono_nuevo_coordenadas.png);
+}
+
+  .x-btn-over .vw-icon-new-item-from-coords,
+  .x-btn-pressed .vw-icon-new-item-from-coords {
+      background-image: url(img/icono_nuevo_coordenadas_over.png);
+  }
+
+
+
+/* Añadir capas */
+.vw-icon-add-layer-wms {
+    background-image: url(img/icono_capa_wms.png);
+}
+
+.vw-icon-add-layer-wfs {
+    background-image: url(img/icono_capa_wfs.png);
+}
+
+.vw-icon-add-layer-vector {
+    background-image: url(img/icono_nueva_capa.png);
+}
+
+
+
+/* Importar SHP */
+.vw-icon-add-layer-shp {
+	background-image: url(img/icono_import_shp.png);
+}
+
+.vw-icon-graticule-tool{
+	background-image: url(img/icono_regleta.png);
+}
+
+.x-btn-over .vw-icon-graticule-tool,
+.x-btn-pressed .vw-icon-graticule-tool {
+      background-image: url(img/icono_regleta_over.png);
+  }
+
+.vw-icon-investmet-initiatives {
+    /*background-image: url(img/boton_iniciativas_inversion.png);*/
+}
+
+
+
+.vw_chart_window {
+
+}
+
+
+
+
+
+
+/** Map controls **/
+
+div.map-overlay {
+	bottom:30px;
+    left: 10px;
+    right: inherit;
+}
+
+/** Others **/
+a.link-planification-tools {
+    text-decoration: none;
+
+}
+
+/** QueryForm.js **/
+
+/* Consultar capa */
+.gxp-icon-find, 
+.vw_queryform {
+    background-image: url(img/icono-herramienta-consultar-capa.png);
+}
+
+  /* Consultar capa */
+ .x-btn-pressed .gxp-icon-find, 
+  .x-btn-over .gxp-icon-find {
+    background-image: url(img/icono-herramienta-consultar-capa_over.png);
+  }
+
+/* Custom */
+#viewer-header {
+	height:100px;
+}
+
+#viewer-header div {
+  background-color: transparent;
+}
+
+#viewer-header #logo {
+  float: left;
+}
+
+  #viewer-header #logo a {
+    display: block;
+    float: right;
+  }
+  #viewer-header #logo a img{
+    display: block;
+  }
+
+  #viewer-header #logo a.logo-chile {
+    float: left;
+  }
+
+#viewer-header #responsive-wrap {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+
+
+#viewer-header-xcollapsed {
+  height: 0 !important;
+}
+
+#viewer-header #responsive-wrap img.banner {
+  float: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: -75px;
+}
+
+#login-wrap {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 125;
+}
+
+#loginDialog input{
+  width: 95%;
+}
+
+/* Medir distancia */
+.x-btn .gxp-icon-measure-length, 
+.x-menu-item .gxp-icon-measure-length, 
+.x-tree-node .gxp-icon-measure-length{
+    background-image: url(img/icono-herramienta-medir-distancia.png) !important;
+}
+
+  .x-btn-over .gxp-icon-measure-length,
+  .x-btn-pressed .gxp-icon-measure-length  {
+      background-image: url(img/icono-herramienta-medir-distancia_over.png) !important;
+  }
+
+
+
+/* Medir area */
+.x-btn .gxp-icon-measure-area, 
+.x-menu-item .gxp-icon-measure-area, 
+.x-tree-node .gxp-icon-measure-area {
+    background-image: url(img/icono-herramienta-medir-area.png) !important;
+}
+
+  .x-btn-over .gxp-icon-measure-area,
+  .x-btn-pressed .gxp-icon-measure-area{
+      background-image: url(img/icono-herramienta-medir-area_over.png) !important;
+  }
+
+.x-btn-icon .x-btn-small .x-btn-text {
+  width: 32px;
+  height: 32px;
+}
+
+/*
+.x-btn-icon .x-btn-small .x-btn-text, .x-btn-text-icon .x-btn-icon-small-left .x-btn-text, .x-btn-text-icon .x-btn-icon-small-right .x-btn-text {
+  background-size: 18px 18px;
+}
+*/
+
+.x-panel-tbar {
+  height: 26px;
+  margin:0;
+  padding:0;
+  background: transparent;
+}
+
+.x-panel-tbar div,
+.x-panel-tbar table,
+.x-panel-tbar table tr,
+.x-panel-tbar table tr td,
+.x-panel-tbar table tr th {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+
+  .x-panel-tbar table.x-toolbar-ct {
+  }
+
+
+/* Spacing between the main toolbar and the container border */
+.x-panel-tbar .x-toolbar-left > table {
+  margin-top: 2px;
+}
+
+
+/* Imprimir */
+.x-btn .gxp-icon-print, 
+.x-menu-item .gxp-icon-print, 
+.x-tree-node .gxp-icon-print {
+  background: transparent url(img/icono-herramienta-imprimir.png) 50% 50% no-repeat;
+}
+
+  .x-btn-over .gxp-icon-print,
+  .x-btn-pressed .gxp-icon-print {
+    background: transparent url(img/icono-herramienta-imprimir_over.png) 50% 50% no-repeat;
+  }
+
+
+/* Informacion */
+.x-btn .gxp-icon-getfeatureinfo, 
+.x-menu-item .gxp-icon-getfeatureinfo, 
+.x-tree-node .gxp-icon-getfeatureinfo {
+  background: transparent url(img/icono-herramienta-informacion.png) 50% 50% no-repeat;
+}
+
+
+  .x-btn-over .gxp-icon-getfeatureinfo, 
+  .x-btn-pressed .gxp-icon-getfeatureinfo {
+    background: transparent url(img/icono-herramienta-informacion_over.png) 50% 50% no-repeat;
+  }
+
+.vw-icon-information-toolbar {
+  background: transparent url(img/icono-herramienta-informacion.png) 50% 50% no-repeat;
+}
+
+  .x-btn-pressed .vw-icon-information-toolbar,
+  .x-btn-over .vw-icon-information-toolbar {
+      background: transparent url(img/icono-herramienta-informacion_over.png) 50% 50% no-repeat;
+    }
+
+
+
+/* Informacion del elemento */
+.x-btn-text.gxp-icon-getfeatureinfo {
+  background: transparent url(img/icono-herramienta-informacion-elementos.png) 50% 50% no-repeat;
+}
+
+ .x-btn-over .x-btn-text.gxp-icon-getfeatureinfo,
+ .x-btn-pressed .x-btn-text.gxp-icon-getfeatureinfo {
+    background: transparent url(img/icono-herramienta-informacion-elementos_over.png) 50% 50% no-repeat;
+  }
+
+
+
+/* Edicion */
+.vw-icon-edition-toolbar {
+  background: transparent url(img/icono-herramienta-edicion.png) 50% 50% no-repeat;
+}
+
+
+
+/* Vista anterior */
+.x-btn .gxp-icon-zoom-previous, 
+.x-tree-node .gxp-icon-zoom-previous {
+  background: transparent url(img/icono-herramienta-vista-anterior.png) 50% 50% no-repeat;
+}
+
+
+
+/* Exportar */
+.vw-icon-importexport-toolbar {
+  background: transparent url(img/icono-herramienta-exportar.png) 50% 50% no-repeat;
+}
+
+ .x-btn-over .vw-icon-importexport-toolbar,
+ .x-btn-pressed .vw-icon-importexport-toolbar {
+    background: transparent url(img/icono-herramienta-exportar_over.png) 50% 50% no-repeat;
+  }
+
+
+/* Certificado */
+.vw-icon-localcertificate-toolbar {
+	 background: transparent url(img/icono_certificado.png) 50% 50% no-repeat;
+}
+
+
+
+/* Seleccion (raton) */
+.vw-icon-localcertificate-mapselection-action {
+  background: transparent url(img/icono_seleccion_raton.png) 50% 50% no-repeat; 
+}
+
+
+
+/* Dialogo busqueda */
+.vw-icon-localcertificate-searchform-action {
+  background: transparent url(img/icono_dialogo_busqueda.png) 50% 50% no-repeat;  
+}
+
+.sidebar-left-header {display:none;}
+
+.sidebar-left-bwrap{padding:5px 0 10px 10px;}
+
+.sidebar-left .x-panel-tbar,
+.sidebar-left .x-panel-bbar{
+	height:auto !important;
+	margin:0 0 3px 0;
+	padding:0;
+	font-size:14px;
+	font-weight:normal;
+	border-bottom:1px solid #d9d9d9;
+	background: #fcfcfc; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #fcfcfc 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fcfcfc 0%,#eeeeee 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */
+}
+.sidebar-left .x-panel-tbar .x-toolbar{
+	border-left:2px solid #086db3;
+	border-bottom:1px solid #fff;}
+.sidebar-left .x-panel-bbar .x-toolbar{
+	border-left:2px solid #FF8700;
+	border-bottom:1px solid #fff;}
+	
+	
+	
+  .sidebar-left .x-panel-tbar div,
+  .sidebar-left .x-panel-tbar table,
+  .sidebar-left .x-panel-tbar table tr,
+  .sidebar-left .x-panel-tbar table tr td,
+  .sidebar-left .x-panel-tbar table tr th {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+  }
+
+.sidebar-left .x-panel-body{
+	margin: 0 0 4px !important;
+  padding: 10px;
+  padding-bottom: 12px;
+  background: #FFF !important;
+}
+	.sidebar-left .x-tree-node>div{
+		padding:8px 10px !important;
+		color:#fff !important;}
+	.sidebar-left .x-tree-node a,
+	.sidebar-left .x-tree-node span{
+		font-size:14px;
+    white-space: normal;
+		color:#086db3 !important;}	
+	.sidebar-left .x-tree-node li a,
+	.sidebar-left .x-tree-node li span{
+		font-size:12px;
+		color:#086db3 !important;}	
+	.sidebar-left .x-tree-node-expanded	a,
+	.sidebar-left .x-tree-node-expanded	span{color:#656565 !important; white-space: normal;}
+	
+	.sidebar-left .x-tree-node .x-tree-node>div {padding:4px 5px !important; overflow: hidden;}
+	.sidebar-left .x-tree-node-expanded{background:#3d8cc3 url(img/bg-x-tree-selected.png) no-repeat right center !important;}
+	.sidebar-left .x-tree-node-expanded span,
+	.sidebar-left .x-tree-node-expanded a{color:#fff !important;}
+	
+  .x-tree-root-node > .x-tree-node > .x-tree-node-leaf .x-tree-ec-icon.x-tree-elbow {
+    display: none;
+  } 
+	
+	.sidebar-left .x-tree-node{
+		border-top:1px solid #d9d9d9;
+		border-bottom:1px solid #ffffff;}
+	.sidebar-left .x-tree-node:first-child{border-top:none;}
+	.sidebar-left .x-tree-node:last-child{border-bottom:none;}
+
+.x-tree-arrows .x-tree-elbow-end-minus{background-image: url("img/arrows.png");}
+  
+.x-panel-body-noheader, .x-panel-mc .x-panel-body, .x-panel-body { border: none; }
+.x-window .x-panel-bwrap .x-panel-body-noheader { text-align: left !important; }
+
+.x-window-plain .x-window-mc {
+  background-color: transparent !important;  
+}
+
+/* div.sidebar-left {
+	top: 0px !important;
+}
+
+div.x-panel {
+	top: 0px !important;
+} */
+
+/* Fix color picker #82321
+.x-window .x-panel-bwrap{
+		padding-left:10px !important;
+}*/
+
+
+tbody tr td.x-btn-mc em button.gxp_loadadditionallayers,
+tbody tr td.x-btn-mc em button.vw-icon-investmet-initiatives,
+tbody tr td.x-btn-mc em button.vw-icon-planification-tools,
+tbody tr td.x-btn-mc em button.vw-icon-storedsearchestbar,
+tbody tr td.x-btn-mc em button.logout,
+tbody tr td.x-btn-mc em button.login {
+  background-size: inherit !important;
+  position: relative;
+  top: 0;
+  width: 135px !important;
+  height: 33px !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+	tbody tr td.x-btn-mc em button.vw-icon-planification-tools{
+		text-indent:-9999em;
+		background: url(img/Bot_instrumentoplanificacion.png) no-repeat 0 0 !important;}
+	tbody tr td.x-btn-mc em button.vw-icon-planification-tools:hover {background-position:0 -33px !important;}
+	
+	tbody tr td.x-btn-mc em button.vw-icon-storedsearchestbar{
+		text-indent:-9999em;
+		background: url(img/Bot_consultapersonalizada.png) no-repeat 0 0 !important;}
+	tbody tr td.x-btn-mc em button.vw-icon-storedsearchestbar:hover {background-position:0 -33px !important;}
+	
+	tbody tr td.x-btn-mc em button.logout{
+		text-indent:-9999em;
+		background: url(img/Bot_cerrarsesion.png) no-repeat 0 0 !important;}
+	tbody tr td.x-btn-mc em button.logout:hover {background-position:0 -33px !important;}
+	
+	tbody tr td.x-btn-mc em button.login{
+		text-indent:-9999em;
+		background: url(img/Bot_abrirsesion.png) no-repeat 0 0 !important;}
+	tbody tr td.x-btn-mc em button.login:hover {background-position:0 -33px !important;}
+	
+tbody tr td.x-btn-mc em button.vw-icon-investmet-initiatives {
+    text-indent: -9999em;
+    background: url(img/boton_iniciativas_inversion.png) no-repeat 0 0 !important;
+}
+tbody tr td.x-btn-mc em button.vw-icon-investmet-initiatives:hover {
+  background-position: 0px -33px!important;
+}
+
+tbody tr td.x-btn-mc em button.gxp_loadadditionallayers {
+  top: 0;
+}
+
+/*.vw-icon-channel-tools:after { content: ' »'; }*/
+
+
+
+
+.olControlOverviewMapContainer{
+	bottom:30px;}
+.olControlOverviewMapElement {
+  background-color: rgba(255,255,255,0.5);
+  border:1px solid #ddd;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.olControlOverviewMapMinimizeButton {
+  overflow: hidden;
+  width: 18px;
+  height: 18px;
+  background: rgba(255,255,255,0.5) url(img/less-bullet.png) center center no-repeat;
+  position: absolute !important;
+  top: 12px;
+  left: -20px;
+  border:1px solid #ddd;
+}
+
+.olControlOverviewMapMaximizeButton {
+  background: rgba(255,255,255,0.5) url(img/plus-bullet.png) center center no-repeat;
+  right: 0;
+  bottom: 80px;
+  border:1px solid #ddd;
+}
+
+  #olControlOverviewMapMaximizeButton img,
+  #OpenLayers_Control_minimizeDiv img { margin-left: 150px; }
+
+.upload-form-field {
+	padding-top: 3px;
+}
+
+#uploadShapeForm .x-form-file-wrap {
+	height: 32px;
+}
+
+#uploadShapeForm .x-btn-text {
+	margin-top: -4px;
+}
+
+/* POPUP */
+
+div.x-panel-header {
+  background: transparent url(img/back-x-panel-header.png) top left repeat-x;
+  margin: 0 0 0 0;
+  /*padding: 0 0 0 5px;*/
+  height: 20px;
+  border-bottom: 1px solid #eee;
+  font-size: x-small !important;
+  line-height: 20px;
+  text-align: left;
+}
+
+div.x-panel-header span.x-panel-header-text {
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    color: #115c91;
+    font-size: 1.25em;
+}
+
+div#inversion-form-region div.x-panel-bwrap {
+  padding-top: 10px;
+  background-color: white !important;
+  border: 1px solid #dcdcdc;
+}
+
+div#pieChartId,
+div#lineChartId {
+  background-color: white !important;
+  border: 1px solid #dcdcdc;
+}
+ 
+.gx-popup .x-panel-body {
+  border: none;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+  .gx-popup .x-panel-body > div {
+    margin: 10px;
+  }
+
+  .gx-popup .x-panel-body div .labelInfo {
+    color: #2987cb;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0 #fff;
+  }
+
+  .gx-popup .x-panel-bwrap .x-panel-body {
+    text-align: center;
+  }
+
+  .gx-popup .x-panel-bwrap .x-panel-body div div {
+    overflow: hidden;
+  }
+
+    .gx-popup .x-panel-bwrap .x-panel-body div div label,
+    .gx-popup .x-panel-bwrap .x-panel-body div div span {
+      display: block;
+      float: left;
+      width: 48.5%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gx-popup .x-panel-bwrap .x-panel-body div div label {
+      text-align: right;
+      /*padding-right: 5px;*/
+    }
+
+    .gx-popup .x-panel-bwrap .x-panel-body div div span {
+      text-align: left;
+      /*padding-right: 5px;*/
+    }
+
+.gx-popup .x-window-body .x-panel {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+}
+
+.x-window-mr {
+  padding-right: 0;
+}
+
+.x-tree-lines .x-tree-elbow-end-minus,
+.x-tree-lines .x-tree-elbow-minus { background: transparent url(img/icono-less.png) 50% 50% no-repeat; }
+
+.x-tree-lines .x-tree-elbow-end-plus,
+.x-tree-lines .x-tree-elbow-plus { background: transparent url(img/icono-plus.png) 50% 50% no-repeat; }
+
+.x-tree-node-leaf .x-tree-node-icon { background: transparent 50% 50% no-repeat; }
+
+.x-tree-selected .x-tree-node-icon { background: transparent 50% 50% no-repeat; }
+
+.x-tree-node-collapsed .x-tree-node-icon {
+  background-image: url(img/folder-closed.gif);
+  margin: 0 5px;
+}
+
+.x-tree-node-expanded .x-tree-node-icon {
+  background-image: url(img/folder-open.gif);
+  margin: 0 5px;
+}
+
+.x-panel .x-tool {
+  background-image: url(img/tool-sprites.gif);
+}
+
+.vw-channel-window .x-tree-node-anchor span {
+  text-transform: capitalize;
+}
+
+
+/* Fin - POPUP */
+
+/* Cuadro de coordenadas */
+
+.olControlCustomMousePosition{
+  width:200px;
+  padding:10px 0;
+  left:10px;
+  bottom:80px;
+  background-color: rgba(255,255,255,0.5);
+  border:1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  top: 0px;
+  display: block;
+}
+.olControlCustomMousePosition .coordinatesDiv {
+  min-height: 60px;
+}
+
+.olControlCustomMousePosition span {
+  display: block;
+  float: left;
+  width: 48%;
+  height: 15px;
+}
+
+.olControlCustomMousePosition span.lonlatLabel {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.olControlCustomMousePosition .changeDisplayButton {
+	margin: 0 auto;
+	width: 140px;
+}
+
+.vw_mouseandscalebox .olControlScaleLineTop, .vw_mouseandscalebox .olControlScaleLineBottom {
+  border: solid 2px black;
+}
+
+.vw_mouseandscalebox .olControlScaleLineTop {
+  border-top: none;  
+}
+
+.vw_mouseandscalebox .olControlScaleLineBottom {
+  border-bottom: none;  
+}
+
+.olControlZoomPanel .olControlZoomInItemInactive {
+  top: 10px;
+}
+
+.olControlZoomPanel .olControlZoomOutItemInactive {
+  top: 115px !important;
+}
+
+/* Footer */
+
+#footer {
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 0;
+  font-size: .7em;
+}
+
+  #footer a { 
+    color: #777;
+  }
+
+    #footer a:hover,
+    #footer a:focus {
+      color: #333;
+    }   
+
+  #footer p strong {
+    color: #999;
+  }
+
+/* Fin - Footer */
+
+.x-grid3-scroller{
+	border-bottom:1px solid #999;}
+
+/* para que todas las ventanas quepan siempre en la pantalla, 
+ añadimos scroll al contenido */
+.x-window .x-window-body > .x-box-inner{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+  /* Reset */
+  .x-shadow { display: none !important; }
+
+  .x-window, .x-window div {
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+    background-image: none;
+  }
+
+  /* Fixes the visualization of the color picker #86174 */
+   .x-cp-hue-msk {
+    background-image: url(colorpicker/side_slider.jpg) !important;
+    background-color: #F00;
+  }
+  
+  .x-cp-rgb-msk {
+    background-image: url(colorpicker/mask.png) !important;
+  background-color: #F00;
+  }
+
+  .x-cp-rgb-picker, .x-cp-hue-picker {
+    background-image: url(colorpicker/picker.gif) !important;
+  }
+  
+  
+  
+.x-window {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background:url(img/bg-x-window.png);
+  border: 8px solid #fff;
+}
+
+.x-window-minimized {
+   bottom: -4px;
+   height: 22px !important;
+   top: auto !important;
+}
+
+.x-window div.x-window-tr {
+  /* Fix color picker #82321
+	margin:0 5px 10px 0;
+	padding:5px 0;*/
+	background:url(img/bg-x-window-tr.png) repeat-x 0 100%;}
+  .x-window div.x-window-tl span.x-window-header-text {
+	font-size:16px !important;
+    color: #086db5;
+  }
+
+.x-window-minimized div.x-window-tl span.x-window-header-text {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+    display: inline-block;  
+    text-overflow: ellipsis;
+  }
+
+
+  .x-btn-text.x-tool,
+.x-window-header .x-tool {
+   z-index:999;
+   cursor:pointer;
+   width: 16px;
+   height: 16px;
+   margin-top: 1px;
+   background-repeat: no-repeat;
+   background-image: url(img/sprite_ventanas.png);
+}
+.x-window-header .x-tool-close {
+  background-position-y: 0px;
+  background-position-x: -80px;
+}
+.x-window-header .x-tool-close-over {
+  background-position-y: -16px;
+  background-position-x: -80px;
+}
+.x-panel .x-tool.x-tool-minimize,
+.x-window-header .x-tool-minimize {
+  background-position-y: 0px;
+  background-position-x: -64px;
+}
+.x-panel .x-tool.x-tool-minimize-over,
+.x-window-header .x-tool-minimize-over {
+  background-position-y: -16px;
+  background-position-x: -64px;
+}
+.x-window-header .x-tool-maximize,
+.x-btn-text.x-tool-maximize {
+  background-position-y: 0px;
+  background-position-x: -48px;
+}
+.x-window-header .x-tool-maximize-over,
+.x-btn-text.x-tool-maximize-over {
+  background-position-y: -16px;
+  background-position-x: -48px;
+}
+
+.x-window-minimized .x-window-header .x-tool-minimize,
+.x-window-header .x-tool-restore,
+.x-btn-text.x-tool-restore {
+  background-position-y: 0px;
+  background-position-x: -32px;
+}
+
+.x-window-minimized .x-window-header .x-tool-minimize-over,
+.x-window-header .x-tool-restore-over,
+.x-btn-text.x-tool-restore-over {
+  background-position-y: -16px;
+  background-position-x: -32px;
+}
+.x-window-header .x-tool-unpin {
+  background-position-y: 0px;
+  background-position-x: 0px;
+}
+.x-window-header .x-tool-unpin-over {
+  background-position-y: -16px;
+  background-position-x: 0px;
+}
+.x-window-header .x-tool-toggle{
+  background-position-y: 0px;
+  background-position-x: -16px;
+}
+.x-window-header .x-tool-toggle-over{
+  background-position-y: -16px;
+  background-position-x: -16px;
+}
+/* EoF x-tools (window buttons) */
+
+.x-resizable-handle-north,
+.x-resizable-handle-east,
+.x-resizable-handle-west{display:none;}
+
+.x-resizable-handle-south{
+	opacity:1 !important;}
+
+#toggleheader{
+  margin-top: 0;
+  margin-right: 0;
+    background: url(img/icono-colapse.png) no-repeat scroll 0 0 !important;
+    height: 18px;
+    width: 18px;
+}
+#toggleheader button{visibility: hidden;}
+
+.x-btn-text.x-tool-maximize {
+  background-image:url(img/icono-max.png) !important;
+}
+
+
+.x-panel .x-tool.x-tool-minimize {
+   background-image: url(img/icono-min.png);
+}
+
+.x-btn-text.x-tool-restore {
+  background-image: url(img/icono-restore.png) !important;
+ 
+}
+
+/* Pin and unpin buttons won't be shown #86177 */
+.x-window-header .x-tool-unpin,
+.x-window-header .x-tool-toggle {  
+ display:none !important;
+}
+
+.x-window button {
+  border-radius: 0px!important;
+  background-color: #f3f3f3!important;
+  color: #383738!important;
+  height: 25px !important;
+  display: inline-block;
+  padding: 0 10px !important;
+  text-transform: uppercase;
+  line-height: 15px;
+  border: 1px solid #c3c3c1!important;
+}
+
+.x-window-ml { padding-left: 0; }
+
+.x-window .x-grid3-header-inner{
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top bottom,  #fcfcfc 0%,#eeeeee 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */}
+.x-window .x-grid3-scroller{background:#fff;}
+
+.olControlPanPanel{top:55px; left: 15px;}
+.gx-zoomslider {top:130px ; left: 28px;}
+.olControlZoomPanel{top:110px; left: 31px;}
+
+/* Capas seccion lateral */
+.sidebar-left .x-tree-node-leaf {
+  position: relative;
+}
+
+.sidebar-left .x-tree-node-ct .x-tree-node-anchor {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 52px;
+  right: 5px;
+}
+
+.sidebar-left .x-tree-node-ct .x-tree-node-anchor span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Mostrar en decimal */
+
+.ext-gecko .coordinatesDiv .changeDisplayDiv table.x-btn.changeDisplayButton.x-btn-noicon,
+.gecko .coordinatesDiv .changeDisplayDiv table.x-btn.changeDisplayButton.x-btn-noicon {
+    /*bottom: -150px!important;
+    left: 70px;
+    position: absolute; para colocar el bot�n abajo*/
+    width: auto;
+    clear: both!important;
+}
+
+/* Boton Print */
+.ext-webkit .x-btn-text.icon-print,
+.ext-gecko .x-btn-text.icon-print,
+.gecko .x-btn-text.icon-print {
+	padding-left: 4px !important;
+}
+
+
+/* toolbar icons from ohiggins */
+.x-btn-mc em.x-btn-arrow {
+  padding-right: 0;
+  background-image: url('./img/arrow.gif');
+  background-position: 21px 21px;
+}
+
+/** White arrows when pressed */
+.x-btn-over .x-btn-mc em.x-btn-arrow,
+.x-btn-pressed .x-btn-mc em.x-btn-arrow {
+  background-image: url('./img/arrow-white.gif');
+}
+
+/* oculta fondo flecha en herramientas secundarias */
+.x-toolbar .x-btn-mc .x-btn-split {
+  background: none;
+} 
+
+/*
+  * SPRITE HERRAMIENTAS
+  * icono 32 x 32 
+  * sprite 384 x auto (puede crecer en altura para añadir más iconos)
+  * tabla de coordenadas e iconos:
+
+    iconos (significado)                  x           y
+
+    añadir campo                          0           64
+    añadir campo:hover                    0           96
+    añadir capa                           32          64
+    añadir capa:hover                     32          96
+    busqueda pretederminada               64          64
+    busqueda pretederminada:hover         64          96
+    calculadora coordenadas               96          64
+    calculadora coordenadas:hover         96          96
+    consulta coordenadas                  128         64
+    consulta coordenadas:hover            128         96
+    consultar capa                        160         64
+    consultar capa:hover                  160         96
+    crear buffer                          192         64
+    crear buffer:hover                    192         96
+    dibujar etiqueta                      224         64
+    dibujar etiqueta:hover                224         96
+    dibujar linea                         256         64
+    dibujar linea:hover                   256         96
+    dibujar polígono                      288         64
+    dibujar polígono:hover                288         96
+    dibujar punto                         320         64
+    dibujar punto:hover                   320         96
+    edición                               352         64
+    edición:hover                         352         96
+    editar estilo                         0           128
+    editar estilo:hover                   0           160
+    elemento coordenadas                  32          128
+    elemento coordenadas:hover            32          160
+    eliminar                              64          128
+    eliminar:hover                        64          160
+    eliminar campo                        96          128
+    eliminar campo:hover                  96          160
+    exportar                              128         128
+    exportar :hover                       128         160
+    exportar kml                          160         128
+    exportar kml:hover                    160         160
+    exportar shp                          192         128
+    exportar shp:hover                    192         160
+    guardar cambios                       224         128
+    guardar cambios:hover                 224         160
+    imprimir                              256         128
+    imprimir:hover                        256         160
+    informacion                           288         128
+    informacion:hover                     288         160
+    informacion elementos                 320         128
+    informacion elementos:hover           320         160
+    medir area                            352         128
+    medir area:hover                      352         160
+    medir distancia                       0           192
+    medir distancia:hover                 0           224
+    medir perimetro                       32          192
+    medir perimetro:hover                 32          224
+    modificar elemento                    64          192
+    modificar elemento:hover              64          224
+    paneo                                 96          192
+    paneo:hover                           96          224
+    seleccionar                           128         192
+    seleccionar:hover                     128         224
+    vista anterior                        160         192
+    vista anterior:hover                  160         224
+    vista inicial                         192         192
+    vista inicial:hover                   192         224
+    vista siguiente                       224         192
+    vista siguiente:hover                 224         224
+    zoom                                  256         192
+    zom:hover                             256         224
+    zoom más                              288         192
+    zoom más:hover                        288         224
+    zoom menos                            320         192
+    zoom menos:hover                      320         224
+
+    // añadidos (12/03/2013)
+
+    añadir (genérico)                     352         192
+    añadir (genérico):hover               352         224
+    asistente WFS                         0           256
+    asistente WFS:hover                   0           288
+    capa temporal                         32          256
+    capa temporal:hover                   32          288
+    certificados                          64          256
+    certificados:hover                    64          288
+    crear (genérico)                      96          256
+    crear (genérico):hover                96          288
+    editar más (wms layer)                128         256
+    editar más (wms layer):hover          128         288
+    modificar (generico)                  160         256
+    modificar (generico):hover            160         288
+    elemento nuevo                        192         256
+    elemento nuevo:hover                  192         288
+    seleccionar mapa                      224         256
+    seleccionar mapa:hover                224         288
+    upload (genérico)                     256         256
+    upload (genérico):hover               256         288
+
+*/
+
+/* a�adir columna */
+.vw-icon-new-column,
+/* eliminar columna */
+.vw-icon-delete-column,
+/* imprimir */
+.gxp-icon-print,
+/* vista inicial */
+.vw-icon-initial-view,
+/* zoom recuadro */
+.gxp-icon-zoom,
+/* zoom mas */
+.gxp-icon-zoom-in,
+/* zoom menos */
+.gxp-icon-zoom-out,
+/* vista anterior */
+.gxp-icon-zoom-previous,
+/* vista siguiente */
+.gxp-icon-zoom-next,
+/* paneo */
+.gxp-icon-pan,
+/* informacion */
+.vw-icon-information-toolbar,
+/* edicion */
+.vw-icon-edition,
+/* añadir capas */
+.gxp-icon-addlayers,
+/* exportar */
+.vw-icon-importexport-toolbar,
+/* certificados municipales */
+.vw-icon-localcertificate-toolbar,
+/* informacion de elementos */
+.gxp-icon-getfeatureinfo,
+/* busqueda predeterminada */
+.vw-icon-default-search,
+/* medir longitud */
+.x-btn .gxp-icon-measure-length,
+/* medir area */
+.x-btn .gxp-icon-measure-area,
+/* medir perimetro*/
+.x-btn .gxp-icon-measure-perimeter,
+/* consultar capa seleccionada */
+.vw_queryform,
+/* consultar coordenadas */
+.vw-icon-point-information,
+/* metadatos de capa seleccionada */
+.vw-icon-show-metadata,
+/* seleccion de elementos */
+.vw-icon-select-item,
+/* añadir etiqueta */
+.vw-icon-draw-tag,
+/* crear buffer */
+.vw-icon-buffer,
+/* dibujar punto */
+.vw-icon-add-point,
+/* dibujar linea */
+.vw-icon-add-line,
+/* dibujar poligono */
+.vw-icon-add-polygon,
+/* nuevo elemento desde coordenadas */
+.vw-icon-new-item-from-coords,
+/* editar mas */
+.gxp-icon-addfeature,
+/* exportar shp */
+.gxp-icon-export-shp,
+/* exportar kml */
+.gxp-icon-export-kml,
+/* añadir */
+.vw-icon-add-layer-wms,
+/* añadir wfs */
+.vw-icon-add-layer-wfs,
+/* wf */
+.vw-icon-add-layer-wf,
+/* capa temporal */
+.vw-icon-add-layer-vector,
+/* subir shp */
+.vw-icon-add-layer-shp,
+/* subir zip */
+.gxp-icon-filebrowse,
+/* formulario de busqueda */
+.vw-icon-localcertificate-searchform-action,
+/* seleccionar mapa */
+.vw-icon-mapselection,
+/* ver toda la capa*/
+.gxp-icon-zoom-to,
+/* eliminar la capa */
+.gxp-icon-removelayers,
+/* hacer capa persistente */
+.gxp-icon-savelayers,
+/* propiedades de la capa */
+.gxp-icon-layerproperties,
+/* editar estilos */
+.gxp-icon-palette,
+/* editar feature */
+.gxp-icon-editfeature {
+  width: 32px !important;
+  height: 32px !important; 
+  background-image: url('img/sprite-herramientas.png') !important;
+  background-repeat: no-repeat !important;
+}
+
+/* negando en el popup */
+.x-window.x-resizable-pinned:not(
+.gxp-icon-print,
+.vw-icon-initial-view,
+.gxp-icon-zoom,
+.gxp-icon-zoom-in,
+.gxp-icon-zoom-out,
+.gxp-icon-zoom-previous,
+.gxp-icon-zoom-next,
+.gxp-icon-pan,
+.vw-icon-information-toolbar,
+.vw-icon-edition,
+.gxp-icon-addlayers,
+.vw-icon-importexport-toolbar,
+.vw-icon-localcertificate-toolbar,
+.gxp-icon-getfeatureinfo,
+.vw-icon-default-search,
+.x-btn .gxp-icon-measure-length,
+.x-btn .gxp-icon-measure-area,
+.x-btn .gxp-icon-measure-perimeter,
+.vw_queryform,
+.vw-icon-point-information,
+.vw-icon-show-metadata,
+.vw-icon-select-item,
+.vw-icon-draw-tag,
+.vw-icon-buffer,
+.vw-icon-add-point,
+.vw-icon-add-line,
+.vw-icon-add-polygon,
+.vw-icon-new-item-from-coords,
+.gxp-icon-addfeature,
+.gxp-icon-export-shp,
+.gxp-icon-export-kml,
+.vw-icon-add-layer-wms,
+.vw-icon-add-layer-wfs,
+.vw-icon-add-layer-wf,
+.vw-icon-add-layer-vector,
+.vw-icon-add-layer-shp,
+.gxp-icon-filebrowse,
+.vw-icon-localcertificate-searchform-action,
+.vw-icon-mapselection,
+.gxp-icon-zoom-to,
+.gxp-icon-removelayers,
+.gxp-icon-savelayers,
+.gxp-icon-layerproperties,
+.gxp-icon-palette,
+.gxp-icon-editfeature){
+  width: 32px !important;
+  height: 32px !important; 
+  background-image: url('img/sprite-herramientas.png') !important;
+  background-repeat: no-repeat !important;
+}
+
+
+
+
+
+
+/*
+  * HERRAMIENTAS PRIMARIAS
+  * Iconos de la barra de herramientas de primer nivel
+*/
+
+/* imprimir */
+.gxp-icon-print {
+  background-position: -255px -128px !important;
+}
+
+  .x-btn-over .gxp-icon-print,
+  .x-btn-pressed .gxp-icon-print {
+    background-position: -255px -157px !important;
+  }
+
+/* vista inicial */
+.vw-icon-initial-view {
+  background-position: -193px -191px !important;
+}
+
+.x-btn-over .vw-icon-initial-view,
+.x-btn-pressed .vw-icon-initial-view {
+  background-position: -193px -222px !important;
+}
+
+/** Zoom rectángulo */ 
+.gxp-icon-zoom {
+  background-position: -288px -256px !important;
+}
+
+.x-btn-over .gxp-icon-zoom,
+.x-btn-pressed .gxp-icon-zoom {
+   background-position: -288px -287px !important;
+}
+
+
+/* zoom mas */
+.gxp-icon-zoom-in {
+  background-position: -288px -192px !important;
+}
+
+  .x-btn-over .gxp-icon-zoom-in,
+  .x-btn-pressed .gxp-icon-zoom-in {
+    background-position: -288px -224px !important;
+  }
+
+/* zoom menos */
+.gxp-icon-zoom-out {
+  background-position: -320px -192px !important;
+}
+
+  .x-btn-over .gxp-icon-zoom-out,
+  .x-btn-pressed .gxp-icon-zoom-out {
+    background-position: -320px -224px !important;
+  }
+
+/* vista anterior */
+.gxp-icon-zoom-previous {
+  background-position: -160px -191px !important;
+}
+
+  .x-btn-over .gxp-icon-zoom-previous,
+  .x-btn-pressed .gxp-icon-zoom-previous {
+    background-position: -160px -224px !important;
+  }
+
+/* vista siguiente */
+.gxp-icon-zoom-next {
+  background-position: -224px -192px !important;
+}
+
+  .x-btn-over .gxp-icon-zoom-next,
+  .x-btn-pressed .gxp-icon-zoom-next {
+    background-position: -224px -224px !important;
+  }
+
+/* paneo */
+.gxp-icon-pan {
+  background-position: -96px -192px !important;
+}
+
+  .x-btn-over .gxp-icon-pan,
+  .x-btn-pressed .gxp-icon-pan {
+    background-position: -96px -224px !important;
+  }
+
+/* informacion */
+.vw-icon-information-toolbar {
+  background-position: -288px -128px !important;
+}
+
+.x-btn-pressed .vw-icon-information-toolbar,
+.vw-icon-information-toolbar:hover {
+  background-position: -288px -160px!important;
+}
+  /*
+    * si contiene submenu (se anula el efecto over)
+  .x-btn-over .vw-icon-information-toolbar,
+  .x-btn-pressed .vw-icon-information-toolbar {
+    background-position: -288px -160px !important;
+  }
+  */
+
+/* edicion */
+.vw-icon-edition {
+  background-position: -352px -64px !important;
+}
+
+.x-btn-pressed .vw-icon-edition,
+.vw-icon-edition:hover {
+  background-position: -352px -96px!important;                                                                                                                                                                      
+}
+  /*
+    * si contiene submenu (se anula el efecto over)
+  .x-btn-over .vw-icon-edition,
+  .x-btn-pressed .vw-icon-edition {
+    background-position: -352px -96px !important;
+  }
+  */
+
+/* añadir capas */
+.gxp-icon-addlayers {
+  background-position: -32px -64px !important;
+}
+
+.x-btn-pressed .gxp-icon-addlayers,
+.gxp-icon-addlayers:hover {
+    background-position: -32px -96px !important;
+}
+
+.x-item-disabled .gxp-icon-addlayers:hover {
+  background-position: -32px -64px !important;
+}
+  /*
+    * si contiene submenu (se anula el efecto over)
+  .x-btn-over .gxp-icon-addlayers,
+  .x-btn-pressed .gxp-icon-addlayers {
+    background-position: -32px -96px !important;
+  }
+  */
+
+/* exportar */
+.vw-icon-importexport-toolbar {
+  background-position: -128px -129px !important;
+}
+
+.x-btn-pressed .vw-icon-importexport-toolbar,
+.vw-icon-importexport-toolbar:hover {
+  background-position: -128px -158px !important;
+}
+  /*
+    * si contiene submenu (se anula el efecto over)
+  .x-btn-over .vw-icon-importexport-toolbar,
+  .x-btn-pressed .vw-icon-importexport-toolbar {
+    background-position: -128px -160px !important;
+  }
+  */
+
+
+/* certificados municipales */
+.vw-icon-localcertificate-toolbar {
+  background-position: -64px -256px !important;
+}
+
+  /*
+    * si contiene submenu (se anula el efecto over)
+  .x-btn-over .vw-icon-localcertificate-toolbar,
+  .x-btn-pressed .vw-icon-localcertificate-toolbar {
+    background-position: -64px -288px !important;
+  }
+  */
+
+/* informacion de elementos */
+.gxp-icon-getfeatureinfo {
+  background-position: -320px -128px !important;
+}
+
+  .x-btn-over .gxp-icon-getfeatureinfo,
+  .x-btn-pressed .gxp-icon-getfeatureinfo {
+    background-position: -320px -160px !important;
+  }
+
+
+/*
+  * HERRAMIENTAS SECUNDARIAS
+  * Iconos de la barra de herramientas de segundo nivel
+  * Grupo: Información
+*/
+
+/* busqueda predeterminada */
+.vw-icon-default-search {
+  background-position: -64px -64px !important;
+}
+
+  .x-btn-over .vw-icon-default-search,
+  .x-btn-pressed .vw-icon-default-search {
+    background-position: -64px -96px !important;
+  }
+
+/* medir longitud */
+.x-btn .gxp-icon-measure-length {
+  background-position: 0 -192px !important;
+}
+
+  .x-btn-over .gxp-icon-measure-length,
+  .x-btn-pressed .gxp-icon-measure-length {
+    background-position: 0 -224px !important;
+  }
+
+/* medir area */
+.gxp-icon-measure-area {
+  background-position: -352px -130px !important;
+}
+
+
+  .x-btn-over .gxp-icon-measure-area,
+  .x-btn-pressed .gxp-icon-measure-area {
+    /* 159 instead of 130+32= 162px because the icon is badly positioned in the sprite*/
+    background-position: -352px -159px !important;
+  }
+
+/* medir area */
+.gxp-icon-measure-perimeter {
+  background-position: -32px -192px !important;
+}
+
+.x-btn-over .gxp-icon-measure-perimeter,
+.x-btn-pressed .gxp-icon-measure-perimeter {
+  background-position: -32px -224px !important;
+}
+
+/* consultar capa seleccionada */
+.vw_queryform {
+  background-position: -160px -64px !important;
+}
+
+  .x-btn-over .vw_queryform,
+  .x-btn-pressed .vw_queryform {
+    background-position: -160px -96px !important;
+  }
+
+/* consultar coordenadas */
+.vw-icon-point-information {
+  background-position: -128px -64px !important;
+}
+
+  .x-btn-over .vw-icon-point-information,
+  .x-btn-pressed .vw-icon-point-information {
+    background-position: -128px -96px !important;
+  }
+
+/* metadatos de capa seleccionada */
+.vw-icon-show-metadata {
+  background-position: -32px -128px !important;
+}
+
+  .x-btn-over .vw-icon-show-metadata,
+  .x-btn-pressed .vw-icon-show-metadata {
+    background-position: -32px -160px !important;
+  }
+
+
+/*
+  * HERRAMIENTAS SECUNDARIAS
+  * Iconos de la barra de herramientas de segundo nivel
+  * Grupo: Edición
+*/
+
+/* seleccion de elementos */
+.vw-icon-select-item {
+  background-position: -128px -192px !important;
+}
+
+  .x-btn-over .vw-icon-select-item,
+  .x-btn-pressed .vw-icon-select-item {
+    background-position: -128px -224px !important;
+  }
+
+/* añadir etiqueta */
+.vw-icon-draw-tag {
+  background-position: -224px -64px !important;
+}
+
+  .x-btn-over .vw-icon-draw-tag,
+  .x-btn-pressed .vw-icon-draw-tag {
+    background-position: -224px -96px !important;
+  }
+
+/* crear buffer */
+.vw-icon-buffer {
+  background-position: -192px -64px !important;
+}
+
+
+  .x-btn-over .vw-icon-buffer,
+  .x-btn-pressed .vw-icon-buffer {
+    background-position: -192px -96px !important;
+  }
+
+/* dibujar punto */
+.vw-icon-add-point {
+	background-position: -320px -64px !important;
+}
+
+  .x-btn-over .vw-icon-add-point,
+  .x-btn-pressed .vw-icon-add-point {
+    background-position: -320px -96px !important;
+  }
+
+/* dibujar linea */
+.vw-icon-add-line {
+	background-position: -256px -64px !important;
+}
+
+  .x-btn-over .vw-icon-add-line,
+  .x-btn-pressed .vw-icon-add-line {
+    background-position: -256px -96px !important;
+  }
+
+/* dibujar poligono */
+.vw-icon-add-polygon {
+	background-position: -288px -64px !important;
+}
+
+  .x-btn-over .vw-icon-add-polygon,
+  .x-btn-pressed .vw-icon-add-polygon {
+    background-position: -288px -96px !important;
+  }
+
+/* nuevo elemento desde coordenadas */
+.vw-icon-new-item-from-coords {
+  background-position: -32px -128px !important;
+}
+
+  .x-btn-over .vw-icon-new-item-from-coords,
+  .x-btn-pressed .vw-icon-new-item-from-coords {
+    background-position: -32px -160px !important;
+  }
+
+/* editar mas */
+.gxp-icon-addfeature {
+  background-position: -128px -256px !important;
+}
+
+  .x-btn-over .gxp-icon-addfeature,
+  .x-btn-pressed .gxp-icon-addfeature {
+    background-position: -128px -288px !important;
+  }
+
+/* a�adir columna */
+.vw-icon-new-column {
+  background-position: -0px -64px!important;
+}
+.vw-icon-new-column:hover {
+  background-position: -0px -96px!important;
+}
+
+.x-item-disabled .vw-icon-new-column:hover {
+  background-position: -0px -64px!important;
+}
+
+/* eliminar columna */
+.vw-icon-delete-column {
+  background-position: -96px -129px!important;
+}
+.vw-icon-delete-column:hover {
+  background-position: -96px -159px!important;
+}
+.x-item-disabled .vw-icon-delete-column:hover {
+  background-position: -96px -129px!important;
+}
+
+/*
+  * HERRAMIENTAS SECUNDARIAS
+  * Iconos de la barra de herramientas de segundo nivel
+  * Grupo: Exportar
+*/
+
+/* exportar shp */
+.gxp-icon-export-shp {
+  background-position: -192px -128px !important;
+}
+
+  .x-btn-over .gxp-icon-export-shp,
+  .x-btn-pressed .gxp-icon-export-shp {
+    background-position: -192px -160px !important;
+  }
+
+/* exportar kml */
+.gxp-icon-export-kml {
+  background-position: -160px -128px !important;
+}
+
+  .x-btn-over .gxp-icon-export-kml,
+  .x-btn-pressed .gxp-icon-export-kml {
+    background-position: -160px -160px !important;
+  }
+
+
+/** editar feature */
+.gxp-icon-editfeature {
+  background-position: -64px -192px !important;
+}
+
+.x-btn-over .gxp-icon-editfeature,
+.x-btn-pressed .gxp-icon-editfeature  {
+  background-position: -64px -224px !important;
+}
+
+
+
+
+/*
+  * MENU DESPLEGABLES
+  * Corrección de estilos y personalizacion de iconos desde el sprite
+*/
+
+  /* capa desplegable */
+  .x-menu-floating {
+    border: 1px #d1d2d4 solid;
+    background-image: none;
+  }
+
+    /* ul */
+    .x-menu-list {
+      height: auto !important;
+    }
+
+      /* a */
+      a.x-menu-item {
+        height: 22px;
+        padding: 10px 5px 5px 40px;
+      }
+
+      /* image */
+      .x-menu-item-ico {}
+
+        
+        /* Grupo: edición */
+
+          /* añadir */
+          .vw-icon-add-layer-wms {
+            background-position: -352px -192px !important;
+          }
+
+          /* wf */
+          .vw-icon-add-layer-wf {
+            background-position: 0 -256px !important;
+          }
+
+          /* wfs */
+          .vw-icon-add-layer-wfs {
+            background-position: 0 -256px !important;
+          }
+
+          /* capa temporal */
+          .vw-icon-add-layer-vector {
+            background-position: -32px -256px !important;
+          }
+
+          /* subir shp */
+    .ext-gecko .x-window-body .x-form-item {
+    overflow: visible;  
+    }
+          .vw-icon-add-layer-shp {
+            background-position: -256px -256px !important;
+          }
+
+          /* subir shp */
+          .vw-icon-add-layer-shp {
+            background-position: -256px -256px !important;
+          }
+
+          /* subir zip */
+          .gxp-icon-filebrowse {
+            background-position: -256px -256px !important;
+          }
+    /* raster */
+    .x-btn.x-form-file-btn.x-btn-icon .x-btn-text.gxp-icon-filebrowse {
+    background-position: -257px -197px!important
+    }
+
+        
+        /* Grupo: certificados municipales */
+
+          /* formulario de busqueda */
+          .vw-icon-localcertificate-searchform-action {
+            background-position: -256px -192px !important;
+          }
+
+          /* seleccionar mapa */
+          .vw-icon-mapselection {
+            background-position: -224px -256px !important;
+          }
+
+        /* Grupo: Ediicón herramientas del sidebar */
+          
+          /* ver toda la capa*/
+          .gxp-icon-zoom-to {
+            background-position: -256px -192px !important;
+          }
+          
+          /* eliminar la capa */
+          .gxp-icon-removelayers {
+            background-position: -64px -128px !important;
+          }
+          
+          /* hacer capa persistente */
+          .gxp-icon-savelayers {
+            background-position: -224px -128px !important;
+          }
+          
+          /* propiedades de la capa */
+          .gxp-icon-layerproperties {
+            background-position: -96px -256px !important;
+          }
+          
+          /* editar estilos */
+          .gxp-icon-palette {
+            background-position: 0 -128px !important;
+          }
+
+/* Expanders de paneles */
+.x-layout-cmini-west, .x-layout-cmini-south {
+  overflow: visible;
+}
+
+.x-layout-mini {
+  opacity: .9;
+  -moz-opacity: .9;
+  filter: alpha(opacity=90);
+}
+
+.x-layout-mini-over, .xlayout-collapsed .x-layout-mini-over {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.x-layout-cmini-south .x-layout-mini,
+.x-layout-cmini-west .x-layout-mini {
+  background: rgba(255, 255, 255, 0.5) url(img/plus-bullet.png) center center no-repeat;
+  border: 1px solid #DDD;
+  height: 18px;
+  width: 18px;
+}
+
+.x-layout-split-south .x-layout-mini,
+.x-layout-split-west .x-layout-mini {
+  background: rgba(255, 255, 255, 0.5) url(img/less-bullet.png) center center no-repeat;
+  border: 1px solid #DDD;
+  height: 18px;
+  width: 18px; 
+}
+
+.x-layout-cmini-south .x-layout-mini, .x-layout-split-south .x-layout-mini {
+  top: -20px;  
+  border-bottom: none;
+  padding-bottom: 1px;
+}
+
+.x-layout-split-west .x-layout-mini, .x-layout-cmini-west .x-layout-mini {
+  left: 5px;
+  border-left: none;
+}
+
+/* Crear nueva capa a partir de SHP */
+
+#uploadShapeForm .x-btn-text {
+  margin-top: 0px;
+}
+
+
+/* Investment popup */
+.vw_fichainversion .info {
+    padding: 2px !important;
+}
+
+.vw_fichainversion div.x-panel-header {
+    border-bottom: 1px solid #EEE !important;
+} 

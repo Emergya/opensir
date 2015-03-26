@@ -1,0 +1,1 @@
+insert into ohiggins.gis_permission(id,name, ptype, config) values (40,'Iniciativas de inversión', 'pgeo_chileindicainvestmentchart', null);

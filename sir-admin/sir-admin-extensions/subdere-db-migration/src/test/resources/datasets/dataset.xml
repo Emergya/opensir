@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataset SYSTEM "usuarios.dtd" >
+<dataset>
+
+    <!-- Tipos de institución -->
+    <gis_authority_type name_auth_type="Municipalidad" id="1"
+        citizen="false" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_authority_type name_auth_type="Servicio Público" id="2"
+        citizen="false" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_authority_type name_auth_type="Otros" id="3"
+        citizen="false" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_authority_type name_auth_type="Ciudadano" id="4"
+        citizen="true" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+
+
+    <!-- Sectores -->
+    <gis_sector id="1" nombre="Salud" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_sector id="2" nombre="Educación" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_sector id="3" nombre="Comercio" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_sector id="4" nombre="Turismo" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_sector id="5" nombre="Industria" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+    <gis_sector id="6" nombre="Agricultura" update_date="2012-10-02 16:27:49.250453"
+        create_date="2012-10-02 16:27:49.250453" />
+
+
+    <!-- Permisos -->
+    <gis_permission id="1" name_permission="Permiso1"
+        create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+    <gis_permission id="2" name_permission="Permiso2"
+        create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+    <gis_permission id="3" name_permission="Permiso3"
+        create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+    <gis_permission id="4" name_permission="Permiso4"
+        create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+    <gis_permission id="5" name_permission="Permiso5"
+        create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+
+
+    <!-- Permisos por tipo de institución -->
+    <gis_permission_by_authtype permission_id="2"
+        auth_type_id="1" />
+    <gis_permission_by_authtype permission_id="4"
+        auth_type_id="1" />
+    <gis_permission_by_authtype permission_id="5"
+        auth_type_id="2" />
+    <gis_permission_by_authtype permission_id="1"
+        auth_type_id="2" />
+    <gis_permission_by_authtype permission_id="5"
+        auth_type_id="3" />
+    <gis_permission_by_authtype permission_id="3"
+        auth_type_id="4" />
+    <gis_permission_by_authtype permission_id="1"
+        auth_type_id="4" />
+
+
+
+    <!-- Ámbito territorial -->
+    <gis_zone enabled="true" id="1" code="1"
+        name="O'Higgins" type="R" />
+    <gis_zone enabled="true" id="2" code="2"
+        name="Cachacoal" type="P" nivelpadre_id="1"/>
+    <gis_zone enabled="true" id="3" code="3"
+        name="Colchagua" type="P" nivelpadre_id="1"/>
+    <gis_zone enabled="true" id="4" code="4"
+        name="Cardenal Caro" type="P" nivelpadre_id="1"/>
+
+    <!-- Municipios de Cachapoal -->
+    <gis_zone enabled="true" id="5" code="5"
+        name="Codegua" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="6" code="6"
+        name="Coinco" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="7" code="7"
+        name="Coltauco" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="8" code="8"
+        name="Doñihue" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="9" code="9"
+        name="Graneros" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="10" code="10"
+        name="Las Cabras" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="11" code="11"
+        name="Machalí" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="12" code="12"
+        name="Malloa" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="13" code="13"
+        name="Mostazal" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="14" code="14"
+        name="Olivar" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="15" code="15"
+        name="Peumo" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="16" code="16"
+        name="Pichidegua" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="17" code="17"
+        name="Quinta de Tilcoco" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="18" code="18"
+        name="Rancagua" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="19" code="19"
+        name="Rengo" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="20" code="20"
+        name="Requínoa" type="M" nivelpadre_id="2"/>
+    <gis_zone enabled="true" id="21" code="21"
+        name="San Vicente de Tagua Tagua" type="M" nivelpadre_id="2"/>
+
+    <!-- municipios de Cardenal Caro -->
+    <gis_zone enabled="true" id="22" code="22"
+        name="La Estrella" type="M" nivelpadre_id="4"/>
+    <gis_zone enabled="true" id="23" code="23"
+        name="Litueche" type="M" nivelpadre_id="4"/>
+    <gis_zone enabled="true" id="24" code="24"
+        name="Marchihue" type="M" nivelpadre_id="4"/>
+    <gis_zone enabled="true" id="25" code="25"
+        name="Navidad" type="M" nivelpadre_id="4"/>
+    <gis_zone enabled="true" id="26" code="26"
+        name="Paredones" type="M" nivelpadre_id="4"/>
+    <gis_zone enabled="true" id="27" code="27"
+        name="Pichilemu" type="M" nivelpadre_id="4"/>
+    <!-- Municipios de Colchagua -->
+    <gis_zone enabled="true" id="28" code="28"
+        name="Chépica" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="29" code="29"
+        name="Chimbarongo" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="30" code="30"
+        name="Lolol" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="31" code="31"
+        name="Nancagua" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="32" code="32"
+        name="Palmilla" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="33" code="33"
+        name="Peralillo" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="34" code="34"
+        name="Placilla" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="35" code="35"
+        name="Pumanque" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="36" code="36"
+        name="San Fernando" type="M" nivelpadre_id="3"/>
+    <gis_zone enabled="true" id="37" code="37"
+        name="Santa Cruz" type="M" nivelpadre_id="3"/>
+
+
+
+
+    <gis_authority name="I. Municipalidad de Chepica" id="1"
+        zone_id="28" auth_type_id="1" create_date="2012-10-02 16:27:49.250453" update_date="2012-10-02 16:27:49.250453" />
+    <gis_authority name="I. Municipalidad de Chimbarongo"
+        id="2" zone_id="29" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Codegua" id="3"
+        zone_id="5" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Coinco" id="4"
+        zone_id="6" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Coltauco"
+        id="5" zone_id="7" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Doñihue" id="6"
+        zone_id="8" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Graneros"
+        id="7" zone_id="9" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de La Estrella"
+        id="8" zone_id="22" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Las Cabras"
+        id="9" zone_id="10" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Litueche"
+        id="10" zone_id="23" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Lolol" id="11"
+        zone_id="30" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Machalí" id="12"
+        zone_id="11" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Malloa" id="13"
+        zone_id="12" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Marchigue"
+        id="14" zone_id="24" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Mostazal"
+        id="15" zone_id="13" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Nancagua"
+        id="16" zone_id="31" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Navidad" id="17"
+        zone_id="25" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Olivar" id="18"
+        zone_id="14" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Palmilla"
+        id="19" zone_id="32" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Paredones"
+        id="20" zone_id="26" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Peralillo"
+        id="21" zone_id="33" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Peumo" id="22"
+        zone_id="15" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Pichidegua"
+        id="23" zone_id="16" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Pichilemu"
+        id="24" zone_id="27" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Quinta Tilcoco"
+        id="25" zone_id="17" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Placilla"
+        id="26" zone_id="34" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Pumanque"
+        id="27" zone_id="35" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Rancagua"
+        id="28" zone_id="18" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Rengo" id="29"
+        zone_id="19" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Requinoa"
+        id="30" zone_id="20" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de San Fernando"
+        id="31" zone_id="36" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de San Vicente"
+        id="32" zone_id="21" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="I. Municipalidad de Santa Cruz"
+        id="33" zone_id="37" auth_type_id="1" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="Concesiones MOP" id="34"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CAPREDENA" id="35"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CONICYT" id="36"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CNR" id="37"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CNCA" id="38"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CORFO" id="39"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CONADI" id="40"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="CONAF" id="41"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="ARQUITECTURA MOP" id="42"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="DIBAM" id="43"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="DOH MOP" id="44"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="PROCHILE" id="45"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="DICREP" id="46"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="DOP MOP" id="47"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="VIALIDAD MOP" id="48"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="FOSIS" id="49"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="FONASA" id="50"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="Gobernación de Cachapoal" id="51"
+        zone_id="2" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="Gobernación de Cardenal Caro"
+        id="52" zone_id="4" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="Gobernación de Colchagua" id="53"
+        zone_id="3" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="GORE O´HIGGINS" id="54"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INNOVA" id="55"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INDAP" id="56"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INJUV" id="57"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="IPS" id="58"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="ISL" id="59"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INE" id="60"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INDAP" id="61"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="JUNAEB" id="62"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="JUNJI" id="63"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="ONEMI" id="64"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SECTRA" id="65"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Agricultura" id="66"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Educación" id="67"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Gobierno" id="68"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Justicia" id="69"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Medio Ambiente" id="70"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Mineria" id="71"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Planificación" id="72"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI Salud" id="73"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMITT" id="74"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI MINVU" id="75"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SEREMI TRABAJO" id="76"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SAG" id="77"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERCOTEC" id="78"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERVICIO SALUD" id="79"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERVIU" id="80"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="Gobierno del Interior" id="81"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SENCE" id="82"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERNAGEOMIN" id="83"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SENADIS" id="84"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERNAM" id="85"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SENAME" id="86"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERNAPESCA" id="87"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERNATUR" id="88"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SENAMA" id="89"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SERNAC" id="90"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="SENDA" id="91"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+    <gis_authority name="INTEGRA" id="92"
+        zone_id="1" auth_type_id="2" create_date="2012-12-10 17:30:49.250453" update_date="2012-12-10 17:30:49.250453" />
+
+
+    <gis_user id="1" username="test1" password="ptest1"  nombre_completo="Nombre Test1" apellidos="Apellidos Test1" telefono="555111221" email="test1@correoelectronico.com" admin="true" valid="true" user_authority_id="1"/>
+    <gis_user id="2" username="test2" password="ptest2"  nombre_completo="Nombre Test2" apellidos="Apellidos Test2" telefono="555111222" email="test2@correoelectronico.com" admin="false" valid="true" user_authority_id="1"/>
+    <gis_user id="3" username="test3" password="ptest3"  nombre_completo="Nombre Test3" apellidos="Apellidos Test3" telefono="555111223" email="test3@correoelectronico.com" admin="false" valid="true" user_authority_id="2"/>
+    <gis_user id="4" username="test4" password="ptest4"  nombre_completo="Nombre Test4" apellidos="Apellidos Test4" telefono="555111224" email="test4@correoelectronico.com" admin="false" valid="true" user_authority_id="2"/>
+    <gis_user id="5" username="test5" password="ptest5"  nombre_completo="Nombre Test5" apellidos="Apellidos Test5" telefono="555111225" email="test5@correoelectronico.com" admin="false" valid="true" user_authority_id="2"/>
+    <gis_user id="6" username="test6" password="ptest6"  nombre_completo="Nombre Test6" apellidos="Apellidos Test6" telefono="555111226" email="test6@correoelectronico.com" admin="false" valid="true" user_authority_id="2"/>
+    <gis_user id="7" username="test7" password="ptest7"  nombre_completo="No borrar" apellidos="Usado en tests" telefono="555111227" email="test7@correoelectronico.com" admin="true" valid="true" user_authority_id="34"/>
+    <gis_user id="8" username="test8" password="ptest8"  nombre_completo="No borrar" apellidos="Usado en tests" telefono="555111227" email="test8@correoelectronico.com" admin="true" valid="true" user_authority_id="54"/>
+
+    <gis_file_type id="1000" type_name="ACUERDOS_CORE" table_name="gis_acuerdos_core"/>
+    <gis_file_type id="2000" type_name="BASE_PREINVERSION_GORE" table_name="gis_base_preinversion_gore"/>
+    <gis_file_type id="3000" type_name="CHILEINDICA_EJECUCION" table_name="gis_chileindica_ejecucion"/>
+    <gis_file_type id="4000" type_name="CHILEINDICA_EJECUCION_DETALLE" table_name="gis_chileindica_ejecucion_detalle"/>
+    <gis_file_type id="5000" type_name="CHILEINDICA_PREINVERSION" table_name="gis_chileindica_preinversion"/>
+    <gis_file_type id="6000" type_name="PROYECTOS_DACG" table_name="gis_proyectos_dacg"/>
+    <gis_file_type id="7000" type_name="PROYECTOS_GEORREFERENCIADOS_MIDESO" table_name="gis_proyectos_georreferenciados_mideso"/>
+    <gis_file_type id="8000" type_name="PROYECTOS_MIDESO" table_name="gis_proyectos_mideso"/>
+    <gis_file_type id="9000" type_name="SHP_PROYECTOS_GEO" table_name="gis_shp_proyectos_georreferenciados" />
+
+    <!-- ACUERDOS CORE columns -->
+    <gis_file_column id="1001" name="NUMERO ACUERDO" type="String" dbname="numero_acuerdo" filetype_id="1000"/>
+    <gis_file_column id="1002" name="FECHA ACUERDO" type="String" dbname="fecha_acuerdo" filetype_id="1000"/>
+    <gis_file_column id="1003" name="ACUERDO MODIFI. " type="String" dbname="acuerdo_modifi" filetype_id="1000"/>
+    <gis_file_column id="1004" name="TIPO" type="String" dbname="tipo" filetype_id="1000"/>
+    <gis_file_column id="1005" name="FUENTE INVERSION" type="String" dbname="fuente_inversion" filetype_id="1000"/>
+    <gis_file_column id="1006" name="SUB FUENTE" type="String" dbname="sub_fuente" filetype_id="1000"/>
+    <gis_file_column id="1007" name="CODIGO BIP" type="String" dbname="codigo_bip" filetype_id="1000"/>
+    <gis_file_column id="1008" name="NOMBRE INICIATIVA" type="String" dbname="nombre_iniciativa" filetype_id="1000"/>
+    <gis_file_column id="1009" name="COMUNA" type="String" dbname="comuna" filetype_id="1000"/>
+    <gis_file_column id="1010" name="SECTOR" type="String" dbname="sector" filetype_id="1000"/>
+    <gis_file_column id="1011" name="ETAPA" type="String" dbname="etapa" filetype_id="1000"/>
+    <gis_file_column id="1012" name="MONTO M$" type="Double" dbname="monto_ms" filetype_id="1000"/>
+    <gis_file_column id="1013" name="COSTO TOTAL M$" type="Double" dbname="costo_total_ms" filetype_id="1000"/>
+    <gis_file_column id="1014" name="SERVICIO RESPONSABLE" type="String" dbname="servicio_responsable" filetype_id="1000"/>
+    <gis_file_column id="1015" name="AÑO" type="String" dbname="anyo" filetype_id="1000"/>
+
+    <!-- BASE PREINVERSION GORE columns -->
+    <gis_file_column id="2001" name="Id" type="String" dbname="id" filetype_id="2000"/>
+    <gis_file_column id="2002" name="CODIGO BIP" type="String" dbname="codigo_bip" filetype_id="2000"/>
+    <gis_file_column id="2003" name="N° Iniciativas que ha postulado la Institucion" type="String" dbname="nro_iniciativas_postuladas" filetype_id="2000"/>
+    <gis_file_column id="2004" name="Carpeta Digital BIP" type="String" dbname="carpeta_digital_bip" filetype_id="2000"/>
+    <gis_file_column id="2005" name="Ingresado a Modulo Preinversion Chile Indica" type="String" dbname="ingresado_mod_preinv_chilenindica" filetype_id="2000"/>
+    <gis_file_column id="2006" name="Lineamiento UDE" type="String" dbname="lineamiento_ude" filetype_id="2000"/>
+    <gis_file_column id="2007" name="Politica Regional de Turismo" type="String" dbname="politica_regional_turismo" filetype_id="2000"/>
+    <gis_file_column id="2008" name="Politica Regional de Ciencia y Tecnologia" type="String" dbname="politica_regional_cyt" filetype_id="2000"/>
+    <gis_file_column id="2011" name="Institucion" type="String" dbname="institucion" filetype_id="2000"/>
+    <gis_file_column id="2012" name="N° Of Institucion" type="String" dbname="nro_of_institucion" filetype_id="2000"/>
+    <gis_file_column id="2021" name="Seleccionada por Intendente" type="String" dbname="seleccionada_por_intendente" filetype_id="2000"/>
+    <gis_file_column id="2026" name="ACUERDO CORE" type="String" dbname="acuerdo_core" filetype_id="2000"/>
+    <gis_file_column id="2028" name="Notas - Observaciones" type="String" dbname="notas_observaciones" filetype_id="2000"/>
+    <gis_file_column id="2029" name="Oficio-memo envío a Mideplan / DACG" type="String" dbname="oficio_envio_mideplan_dacg" filetype_id="2000"/>
+    <gis_file_column id="2031" name="ERD 2011-2020" type="String" dbname="erd" filetype_id="2000"/>
+    <gis_file_column id="2032" name="Plan O´Higgins 2010-2014" type="String" dbname="plan_ohiggins_2010_2014" filetype_id="2000"/>
+    <gis_file_column id="2033" name="Convenio Programacion" type="String" dbname="convenio_programacion" filetype_id="2000"/>
+    <gis_file_column id="2034" name="Plan Reconstruc 27F" type="String" dbname="plan_reconstruc_27f" filetype_id="2000"/>
+    <gis_file_column id="2035" name="atributos que presenta" type="String" dbname="atributos_que_presenta" filetype_id="2000"/>
+    <gis_file_column id="2036" name="Total de atributos" type="String" dbname="total_de_atributos" filetype_id="2000"/>
+    <gis_file_column id="2037" name="Etapa" type="String" dbname="etapa" filetype_id="2000" />
+    <gis_file_column id="2038" name="Servicio Responsable" type="String" dbname="servicio_responsable" filetype_id="2000" />
+    <gis_file_column id="2039" name="Año" type="String" dbname="anyo" filetype_id="2000" />
+    
+    
+    <!-- CHILEINDICA EJECUCIÓN -->
+    <gis_file_column id="3001" name="Codigo" type="String"                  dbname="codigo" filetype_id="3000"/>
+    <gis_file_column id="3002" name="Nombre de la Iniciativa" type="String" dbname="nombre_iniciativa" filetype_id="3000"/>
+    <gis_file_column id="3003" name="Rate" type="String"                    dbname="rate" filetype_id="3000"/>
+    <gis_file_column id="3004" name="Item Presupuestario" type="String"     dbname="item_presupuestario" filetype_id="3000"/>
+    <gis_file_column id="3005" name="Etapa" type="String"                   dbname="etapa" filetype_id="3000"/>
+    <gis_file_column id="3006" name="Ubicacion Geografica" type="String"    dbname="ubicacion_geografica" filetype_id="3000"/>
+    <gis_file_column id="3007" name="Sector" type="String"                  dbname="sector" filetype_id="3000"/>
+    <gis_file_column id="3008" name="Servicio Responsable" type="String"    dbname="servicio_responsable" filetype_id="3000"/>
+    <gis_file_column id="3009" name="Costo Core" type="Double"              dbname="costo_core" filetype_id="3000"/>
+    <gis_file_column id="3010" name="Costo EBI" type="Double"               dbname="costo_ebi" filetype_id="3000"/>
+    <gis_file_column id="3011" name="Costo Total Ajustado" type="Double"    dbname="costo_total_ajustado" filetype_id="3000"/>
+    <gis_file_column id="3012" name="Gastado Años Anteriores" type="Double" dbname="gastado_anyos_anteriores" filetype_id="3000"/>
+    <gis_file_column id="3013" name="Solicitado" type="Double"              dbname="solicitado" filetype_id="3000"/>
+    <gis_file_column id="3014" name="Saldo Proximo Año" type="Double"       dbname="saldo_proximo_anyo" filetype_id="3000"/>
+    <gis_file_column id="3015" name="Saldo Años Restantes" type="Double"    dbname="saldo_anyos_restantes" filetype_id="3000"/>
+    <gis_file_column id="3016" name="Total Asignado" type="Double"          dbname="total_asignado" filetype_id="3000"/>
+    <gis_file_column id="3017" name="Asignacion Disponible" type="Double"   dbname="asignacion_disponible" filetype_id="3000"/>
+    <gis_file_column id="3018" name="Saldo por Asignar" type="Double"       dbname="saldo_por_asignar" filetype_id="3000"/>
+    <gis_file_column id="3019" name="Total Pagado" type="Double"            dbname="total_pagado" filetype_id="3000"/>
+    <gis_file_column id="3020" name="Pagado Acumulado a Septiembre" type="Double" dbname="pago_acumulado_a_septiembre" filetype_id="3000"/>
+    <gis_file_column id="3021" name="Pagado Enero" type="Double"            dbname="pagado_enero" filetype_id="3000"/>
+    <gis_file_column id="3022" name="Pagado Febrero" type="Double"          dbname="pagado_febrero" filetype_id="3000"/>
+    <gis_file_column id="3023" name="Pagado Marzo" type="Double"            dbname="pagado_marzo" filetype_id="3000"/>
+    <gis_file_column id="3024" name="Pagado Abril" type="Double"            dbname="pagado_abril" filetype_id="3000"/>
+    <gis_file_column id="3025" name="Pagado Mayo" type="Double"             dbname="pagado_mayo" filetype_id="3000"/>
+    <gis_file_column id="3026" name="Pagado Junio" type="Double"            dbname="pagado_junio" filetype_id="3000"/>
+    <gis_file_column id="3027" name="Pagado Julio" type="Double"            dbname="pagado_julio" filetype_id="3000"/>
+    <gis_file_column id="3028" name="Pagado Agosto" type="Double"           dbname="pagado_agosto" filetype_id="3000"/>
+    <gis_file_column id="3029" name="Pagado Septiembre" type="Double"       dbname="pagado_septiembre" filetype_id="3000"/>
+    <gis_file_column id="3030" name="Pagado Octubre" type="Double"          dbname="pagado_octubre" filetype_id="3000"/>
+    <gis_file_column id="3031" name="Pagado Noviembre" type="Double"        dbname="pagado_noviembre" filetype_id="3000"/>
+    <gis_file_column id="3032" name="Pagado Diciembre" type="Double"        dbname="pagado_diciembre" filetype_id="3000"/>
+    <gis_file_column id="3033" name="% Avance Fisico" type="String"         dbname="porcentaje_avance_fisico" filetype_id="3000"/>
+    <gis_file_column id="3034" name="% Avance Financiero" type="String"     dbname="porcentaje_avance_financiero" filetype_id="3000"/>
+    <gis_file_column id="3035" name="Código BIP" type="String"				dbname="codigo_bip" filetype_id="3000"/>
+    <gis_file_column id="3036" name="Año" type="String"						dbname="anyo" filetype_id="3000"/>
+    
+    <!-- CHILEINDICA EJECUCIÓN DETALLE -->
+    <gis_file_column id="4001" name="Ano" type="String"                     dbname="anyo" filetype_id="4000"/>
+    <gis_file_column id="4002" name="Etapa" type="String"                   dbname="etapa" filetype_id="4000"/>
+    <gis_file_column id="4003" name="Descripcion" type="String"             dbname="descripcion" filetype_id="4000"/>
+    <gis_file_column id="4005" name="Codigo" type="String"                  dbname="codigo" filetype_id="4000"/>
+    <gis_file_column id="4006" name="Nombre de la Iniciativa" type="String" dbname="nombre_iniciativa" filetype_id="4000"/>
+    <gis_file_column id="4007" name="Servicio Responsable" type="String"    dbname="servicio_responsable" filetype_id="4000"/>
+    <gis_file_column id="4008" name="Unidad Tecnica" type="String"          dbname="unidad_tecnica" filetype_id="4000"/>
+    <gis_file_column id="4009" name="Nivel Territorial" type="String"       dbname="nivel_territorial" filetype_id="4000"/>
+    <gis_file_column id="4010" name="Comuna" type="String"                  dbname="comuna" filetype_id="4000"/>
+    <gis_file_column id="4011" name="Sector" type="String"                  dbname="sector" filetype_id="4000"/>
+    <gis_file_column id="4012" name="Fuente Financiamiento" type="String"   dbname="fuente_financiamiento" filetype_id="4000"/>
+    <gis_file_column id="4013" name="Costo Ajustado" type="Double"          dbname="costo_ajustado" filetype_id="4000"/>
+    <gis_file_column id="4014" name="Gastado Años Anteriores" type="Double" dbname="gastado_anyos_anteriores" filetype_id="4000"/>
+    <gis_file_column id="4015" name="Pagado" type="Double"                  dbname="pagado" filetype_id="4000"/>
+    <gis_file_column id="4016" name="Solicitado" type="Double"              dbname="solicitado" filetype_id="4000"/>
+    <gis_file_column id="4017" name="Código BIP" type="String"              dbname="codigo_bip" filetype_id="4000"/>
+    
+    
+    <!-- CHILEINDICA PREINVERSIÓN -->
+    <gis_file_column id="5001" name="Fuente Financiamiento" type="String"   dbname="fuente_financiamiento" filetype_id="5000"/>
+    <gis_file_column id="5002" name="Año" type="String"                     dbname="anyo" filetype_id="5000"/>
+    <gis_file_column id="5003" name="Institucion Responsable" type="String" dbname="institucion_responsable" filetype_id="5000"/>
+    <gis_file_column id="5004" name="Codigo BIP" type="String"              dbname="codigo_bip" filetype_id="5000"/>
+    <gis_file_column id="5005" name="Sector" type="String"                  dbname="sector" filetype_id="5000"/>
+    <gis_file_column id="5006" name="Estado" type="String"                  dbname="estado" filetype_id="5000"/>
+    <gis_file_column id="5007" name="Observaciones" type="String"           dbname="observaciones" filetype_id="5000"/>
+    <gis_file_column id="5008" name="Costo Total" type="Double"             dbname="costo_total" filetype_id="5000"/>
+    <gis_file_column id="5009" name="Solicitado Año" type="Double"          dbname="solicitado_anyo" filetype_id="5000"/>
+    <gis_file_column id="5010" name="Etapa" type="String"                   dbname="etapa" filetype_id="5000"/>
+    <gis_file_column id="5011" name="Via de Financiamiento" type="String"   dbname="via_de_financiamiento" filetype_id="5000"/>
+    <gis_file_column id="5012" name="Comuna" type="String"                  dbname="comuna" filetype_id="5000"/>
+    <gis_file_column id="5016" name="Servicio Responsable" type="String"    dbname="servicio_responsable" filetype_id="5000"/>
+    
+    
+    <!-- PROYECTOS DACG -->
+    <gis_file_column id="6001" name="Id" type="String"                      dbname="id" filetype_id="6000"/>
+    <gis_file_column id="6002" name="CODIGO" type="String"                  dbname="codigo" filetype_id="6000"/>
+    <gis_file_column id="6003" name="NOMBRE" type="String"                  dbname="nombre" filetype_id="6000"/>
+    <gis_file_column id="6004" name="ETAPA" type="String"                   dbname="etapa" filetype_id="6000"/>
+    <gis_file_column id="6005" name="Fecha_Obs" type="String"               dbname="fecha_observacion" filetype_id="6000"/>
+    <gis_file_column id="6006" name="OBSERVACION" type="String"             dbname="observacion" filetype_id="6000"/>
+    <gis_file_column id="6007" name="AÑO" type="String"             		dbname="anyo" filetype_id="6000"/>
+    <gis_file_column id="6008" name="Servicio Responsable" type="String" 	dbname="servicio_responsable" filetype_id="6000"/>
+    <gis_file_column id="6009" name="Código BIP" type="String" 				dbname="codigo_bip" filetype_id="6000"/>
+   
+    <!-- PROYECTOS GEORREFERENCIADOS MIDESO -->
+    <gis_file_column id="7001" name="COD_BIP" type="String"                 dbname="cod_bip" filetype_id="7000"/>
+    <gis_file_column id="7002" name="NOMBRE" type="String"                  dbname="nombre" filetype_id="7000"/>
+    <gis_file_column id="7003" name="ETAPA" type="String"                   dbname="etapa" filetype_id="7000"/>
+    <gis_file_column id="7004" name="SECTOR" type="String"                  dbname="sector" filetype_id="7000"/>
+    
+    <!-- PROYECTOS MIDESO -->
+    <gis_file_column id="8001" name="CODIGO BIP" type="String"              dbname="codigo_bip" filetype_id="8000"/>
+    <gis_file_column id="8002" name="RATE" type="String"                    dbname="rate" filetype_id="8000"/>
+    <gis_file_column id="8003" name="ETAPA POSTULA" type="String"           dbname="etapa" filetype_id="8000"/>
+    <gis_file_column id="8004" name="FECHA RATE" type="String"              dbname="fecha_rate" filetype_id="8000"/>
+    <gis_file_column id="8005" name="SERVICIO RESPONSABLE" type="String"    dbname="servicio_responsable" filetype_id="8000"/>
+    <gis_file_column id="8006" name="AÑO" type="String"    					dbname="anyo" filetype_id="8000"/>
+    
+    <!-- SHP PROYECTOS GEO -->
+    <gis_file_column id="9001" name="COD_BIP" type="String"                 dbname="cod_bip" filetype_id="9000"/>
+    <gis_file_column id="9002" name="NOMBRE" type="String"                  dbname="nombre" filetype_id="9000"/>
+    <gis_file_column id="9003" name="TIPOLO" type="String"                  dbname="tipolo" filetype_id="9000"/>
+    <gis_file_column id="9004" name="REG" type="String"                     dbname="reg" filetype_id="9000"/>
+    <gis_file_column id="9005" name="PROV" type="String"                    dbname="prov" filetype_id="9000"/>
+    <gis_file_column id="9006" name="COM" type="String"                     dbname="com" filetype_id="9000"/>
+    <gis_file_column id="9007" name="SECTOR" type="String"                  dbname="sector" filetype_id="9000"/>
+    <gis_file_column id="9008" name="SUBSEC" type="String"                  dbname="subsec" filetype_id="9000"/>
+    <gis_file_column id="9009" name="INSTIT" type="String"                  dbname="instit" filetype_id="9000"/>
+    <gis_file_column id="9010" name="ETAPA" type="String"                   dbname="etapa" filetype_id="9000"/>
+    <gis_file_column id="9011" name="Coord_X" type="Double"                 dbname="coord_x" filetype_id="9000"/>
+    <gis_file_column id="9012" name="Coord_Y" type="Double"                 dbname="coord_y" filetype_id="9000"/>
+    
+    <!--======================================-->
+    <!--======== persistence geo init ========-->
+    <!--======================================-->
+
+    <!-- LAYER TYPES -->
+    <gis_layer_type id="1" name="WMS" tipo="Raster"/>
+    <gis_layer_type id="2" name="WFS" tipo="Raster"/>
+    <gis_layer_type id="3" name="KML" tipo="Raster"/>
+    <gis_layer_type id="4" name="WMS" tipo="Vectorial"/>
+    <gis_layer_type id="5" name="WFS" tipo="Vectorial"/>
+    <gis_layer_type id="6" name="KML" tipo="Vectorial"/>
+	<!-- gis_layer_type id="4" name="GML" />
+	<gis_layer_type id="6" name="TEXT" />
+    <gis_layer_type id="7" name="WMST" /-->
+
+	<!--======= channel folders ======-->
+	<!-- not in zone -->
+    <gis_folder enabled="true" id="1" name="Educación" is_channel="true" />
+    <gis_folder enabled="true" id="2" name="Salud" is_channel="true" />
+    <gis_folder enabled="true" id="3" name="Medioambiente" is_channel="true" />
+    <gis_folder enabled="true" id="4" name="Censos" is_channel="true" />
+    <gis_folder enabled="true" id="7" name="Turismo" is_channel="true" />
+    <gis_folder enabled="true" id="8" name="Agricultura" is_channel="true" />
+    <gis_folder enabled="true" id="9" name="Otros" is_channel="true" />
+    <gis_folder enabled="true" id="10" name="Plan Regulador Machalí" is_plain="true" folder_zone_id="11" is_channel="false" />
+	<!-- in zone 
+    <gis_folder enabled="true" id="8" name="Rancagua" folder_zone_id="18" is_channel="true"/>
+    <gis_folder enabled="true" id="9" name="Machalí" folder_zone_id="11" is_channel="true"/>-->
+    <!-- disabled folder for channel test 
+    <gis_folder enabled="false" id="10" name="Disabled Channel" is_channel="true" create_date="2012-12-12 22:22:21.212102" /> -->
+    <!--======= EoF channel folders examples ======-->
+
+    <!--====== Layers examples ======-->
+    <!-- by auth_id -->
+    <!-- INTEGRA -->
+    <gis_layer id="40" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_jardines_INTEGRA" layer_layer_type_id="4" layer_auth_id="92" />
+    <!-- SEREMI EDUCACIÓN -->
+    <gis_layer id="41" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Establecimientos_educacion" layer_layer_type_id="4" layer_auth_id="67" />
+    <!-- SEREMI DE SALUD -->
+    <gis_layer id="43" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:APR" layer_layer_type_id="4" layer_auth_id="73" />
+    <gis_layer id="44" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Establecimientos_salud" layer_layer_type_id="4" layer_auth_id="73" />
+    <!-- MOP - DGA -->
+    <gis_layer id="45" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Cuencas_VI" layer_layer_type_id="4" layer_auth_id="92" /><!--hall-->
+    <!-- SEREMI MEDIOAMBIENTE -->
+    <gis_layer id="46" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Areas_alto_valor_ambiental" layer_layer_type_id="4" layer_auth_id="70" />
+    <!-- GORE -->
+    <gis_layer id="47" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Comuna_2002" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="48" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Distrito_censal_2002" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="49" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Manzanas_urbanas_2002" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="50" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Entidades_rurales_2002" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="51" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Sectores_rurales_2002" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="52" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Comuna_1992" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="53" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Distrito_censal_1992" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="54" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Entidades_rurales_1992" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="55" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Sectores_rurales_1992" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="73" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_drenaje_250mil" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="74" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_drenaje_50mil" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="56" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="57" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Geomorfologia" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="58" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Hidrogeologia" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="59" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Geologia" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="60" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Limite_administrativo" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="61" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Limite_UDE" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="62" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:centrales" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="63" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Nombre_cerros" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="64" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Centrales" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="65" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Nombre_rios_esteros_quebradas" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="66" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Carabineros" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="67" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Bomberos" layer_layer_type_id="4" layer_auth_id="54" />
+    <gis_layer id="68" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:ZONIFICACION" layer_layer_type_id="4" layer_auth_id="54" />
+    <!-- SERNATUR -->
+    <gis_layer id="75" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Atractivos_turisticos" layer_layer_type_id="4" layer_auth_id="88" />
+    <gis_layer id="76" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Areas_turisticas_prioritarias" layer_layer_type_id="4" layer_auth_id="88" />
+    <!-- NADA 
+    <gis_layer id="77" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Capacidad_uso_suelo""8" layer_layer_type_id="4" layer_auth_id="92" />
+    <gis_layer id="78" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Area_prohibida_caza""8" layer_layer_type_id="4" layer_auth_id="92" />-->
+    <!-- MOP - VIALIDAD -->
+    <gis_layer id="70" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_layer_type_id="4" layer_auth_id="48" />
+    <!-- SERNAPESCA -->
+    <gis_layer id="79" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_layer_type_id="4" layer_auth_id="87" />
+    <gis_layer id="71" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Caletas_pesqueras" layer_layer_type_id="4" layer_auth_id="87" />
+    <gis_layer id="72" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Amerb" layer_layer_type_id="4" layer_auth_id="87" />
+    <gis_layer id="80" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Asentamisntos_pesqueros" layer_layer_type_id="4" layer_auth_id="87" />
+    <!-- for channel test -->
+    <gis_layer id="1" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_jardines_INTEGRA" layer_folder_id="1" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="2" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Establecimientos_educacion" layer_folder_id="1" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="3" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:APR" layer_folder_id="2" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="4" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Establecimientos_salud" layer_folder_id="2" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="5" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Cuencas_VI" layer_folder_id="3" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="6" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Areas_alto_valor_ambiental" layer_folder_id="3" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="7" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Comuna_2002" layer_folder_id="4" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="8" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Distrito_censal_2002" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="9" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Manzanas_urbanas_2002" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="10" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Entidades_rurales_2002" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="11" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Sectores_rurales_2002" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="12" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Comuna_1992" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="13" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Distrito_censal_1992" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="14" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Entidades_rurales_1992" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="15" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Sectores_rurales_1992" layer_folder_id="4" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="16" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Atractivos_turisticos" layer_folder_id="7" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="17" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Areas_turisticas_prioritarias" layer_folder_id="7" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="18" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Capacidad_uso_suelo" layer_folder_id="8" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="19" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Area_prohibida_caza" layer_folder_id="8" is_channel="true" layer_layer_type_id="4" />
+    <gis_layer id="20" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <!-- Carpeta OTROS -->
+    <gis_layer id="38" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="21" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Caletas_pesqueras" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="22" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Amerb" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="23" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Asentamisntos_pesqueros" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="24" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_drenaje_250mil" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="25" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_drenaje_50mil" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="26" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Red_vial_oficial" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="27" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Geomorfologia" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="28" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Hidrogeologia" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="29" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Geologia" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="30" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Limite_administrativo" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="31" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Limite_UDE" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="32" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:centrales" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="33" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Nombre_cerros" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="34" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Centrales" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="35" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Nombre_rios_esteros_quebradas" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="36" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Carabineros" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <gis_layer id="37" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:Bomberos" layer_folder_id="9" is_channel="false" layer_layer_type_id="4" />
+    <!-- TODO:Directorio Plantas Urbanas, Directorio “Satélite Landsat 2003” en dropbox -->
+    <gis_layer id="39" enabled="true" creat_date="2012-12-26 22:22:21.212102" server_resource="${geoserver.url}/wms?" name_layer="gore:ZONIFICACION" layer_folder_id="10" is_channel="false" layer_layer_type_id="4" />
+    <!--====== EoF Layers examples ======-->
+
+    <!--======================================-->
+    <!--====== EoF persistence geo init ======-->
+    <!--======================================-->
+
+</dataset>

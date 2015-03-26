@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT dataset (
+    gis_authority_type|
+    gis_sector|
+    gis_permission|
+    gis_permission_by_authtype|
+    gis_zone|
+    gis_authority|
+    gis_user|
+    gis_file_type|
+    gis_file_column|
+    gis_layer_type|
+    gis_layer_type_property|
+    gis_property_in_layer_type|
+    gis_folder|
+    gis_layer|
+    gis_layer_property|
+    gis_layer_gis_layer_property
+)*>
+ 
+<!ELEMENT gis_user EMPTY>
+<!ATTLIST gis_user
+    id  CDATA #REQUIRED
+    admin CDATA #IMPLIED
+    apellidos CDATA #IMPLIED
+    create_date CDATA #IMPLIED
+    email CDATA #IMPLIED
+    nombre_completo CDATA #IMPLIED
+    password  CDATA #REQUIRED
+    telefono CDATA #IMPLIED
+    update_date CDATA #IMPLIED    
+    username  CDATA #REQUIRED    
+    valid CDATA #IMPLIED
+    user_authority_id CDATA #IMPLIED
+>
+
+<!ELEMENT gis_zone EMPTY>
+<!ATTLIST gis_zone
+    id CDATA #REQUIRED
+    code CDATA #IMPLIED
+    create_date CDATA #IMPLIED
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+    nivelpadre_id CDATA #IMPLIED 
+    enabled CDATA #REQUIRED   
+>
+
+<!ELEMENT gis_authority EMPTY>
+<!ATTLIST gis_authority
+    id CDATA #REQUIRED
+    create_date CDATA #IMPLIED
+    name CDATA #REQUIRED
+    update_date CDATA #IMPLIED
+    auth_type_id CDATA #IMPLIED
+    zone_id CDATA #IMPLIED
+>
+
+<!ELEMENT gis_permission EMPTY>
+<!ATTLIST gis_permission
+    id CDATA #REQUIRED
+    create_date CDATA #IMPLIED
+    name_permission CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+>
+
+<!ELEMENT gis_permission_by_authtype EMPTY>
+<!ATTLIST gis_permission_by_authtype
+    auth_type_id CDATA #REQUIRED
+    permission_id CDATA #REQUIRED
+>
+
+<!ELEMENT gis_sector EMPTY>
+<!ATTLIST gis_sector
+    id CDATA #REQUIRED
+    nombre CDATA #IMPLIED
+    create_date CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+>
+
+<!ELEMENT gis_authority_type EMPTY>
+<!ATTLIST gis_authority_type
+    id CDATA #REQUIRED
+    citizen CDATA #IMPLIED
+    create_date CDATA #IMPLIED
+    name_auth_type CDATA #REQUIRED
+    update_date CDATA #IMPLIED
+>
+
+<!ELEMENT gis_file_type EMPTY>
+<!ATTLIST gis_file_type
+    id CDATA #REQUIRED
+    type_name CDATA #REQUIRED
+    table_name CDATA #IMPLIED
+    create_date CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+>
+
+<!ELEMENT gis_file_column EMPTY>
+<!ATTLIST gis_file_column
+    id CDATA #REQUIRED
+    name CDATA #REQUIRED
+    type CDATA #REQUIRED
+    dbname CDATA #REQUIRED
+    filetype_id CDATA #REQUIRED 
+    create_date CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+>
+
+<!ELEMENT gis_layer_type EMPTY>
+<!ATTLIST gis_layer_type
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	tipo CDATA #REQUIRED
+>
+
+<!ELEMENT gis_layer_type_property EMPTY>
+<!ATTLIST gis_layer_type_property
+       id CDATA #REQUIRED
+       name CDATA #REQUIRED
+>
+       
+<!ELEMENT gis_property_in_layer_type EMPTY>
+<!ATTLIST gis_property_in_layer_type
+       layer_type CDATA #REQUIRED
+       property CDATA #REQUIRED
+>
+	
+<!ELEMENT gis_folder EMPTY>
+<!ATTLIST gis_folder
+	id CDATA #REQUIRED
+    name CDATA #REQUIRED
+	folder_zone_id CDATA #IMPLIED
+	folder_parent_id CDATA #IMPLIED
+	is_channel CDATA #IMPLIED
+	is_plain CDATA #IMPLIED
+    enabled CDATA #REQUIRED
+    create_date CDATA #IMPLIED
+>
+    
+    
+<!ELEMENT gis_layer EMPTY>
+<!ATTLIST gis_layer
+    id CDATA #REQUIRED
+    name_layer CDATA #REQUIRED
+    enabled CDATA #REQUIRED
+    server_resource CDATA #IMPLIED
+    publicized CDATA #IMPLIED
+    order_layer CDATA #IMPLIED
+    is_channel CDATA #IMPLIED
+    creat_date CDATA #IMPLIED
+    update_date CDATA #IMPLIED
+    layer_user_id CDATA #IMPLIED
+    layer_auth_id CDATA #IMPLIED
+    layer_folder_id CDATA #IMPLIED
+    layer_layer_type_id CDATA #IMPLIED
+>
+
+
+
+<!ELEMENT gis_layer_property EMPTY>
+<!ATTLIST gis_layer_property
+    id CDATA #REQUIRED
+    name CDATA #REQUIRED
+    value CDATA #REQUIRED
+>
+
+<!ELEMENT gis_layer_gis_layer_property EMPTY>
+<!ATTLIST gis_layer_gis_layer_property
+    gis_layer_id CDATA #REQUIRED
+    properties_id CDATA #REQUIRED
+>

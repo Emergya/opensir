@@ -1,0 +1,7 @@
+========
+WARNING!
+========
+
+Compasses images must always be in this folder!
+
+If moved, MapFish won't be able to locate the images (unless the config.yaml file is also updated)

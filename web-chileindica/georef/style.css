@@ -1,0 +1,48 @@
+div#map {
+	display: block;
+	overflow: hidden;
+	border: 1px solid #CCC;
+	width: 100%;	
+	/*min-height: 400px;
+	max-height: 600px;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+div#title_map {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #000000;	
+	font-size: 14px;	
+}
+div#title_map span
+{
+	color: #DC6625;
+	font-weight: bold;	
+}
+h3{
+	color: #DC6625;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+h5{
+	color: #A7A7A6;
+	margin: 0px;
+	text-transform: uppercase;
+	font-size: 11px;	
+}
+h5 span {
+	color: #000;
+	margin: 0px;	
+	font-size: 12px;
+	font-weight: normal;	
+}
+input#sel_pto{
+	margin-top: 5px;
+	width: 100%;
+	background-color: #DC6625;
+	border-radius: 2px;
+	padding: 2px;
+	color: #FFF;
+}
