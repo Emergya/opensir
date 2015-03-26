@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.emergya</groupId>
+		<artifactId>sir-admin-base</artifactId>
+		<version>10.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>sir-admin-base-core</artifactId>
+  <version>10.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+    <!-- Project Information -->
+    <licenses>
+        <license>
+            <name>GPL 2.0</name>
+            <url>http://www.gnu.org/licenses/gpl-2.0.html</url>
+        </license>
+    </licenses>
+
+
+	<name>Core model and services</name>
+	<url>http://www.emergya.es</url>
+	<description>Core model and services for sir-admin project</description>
+
+	<organization>
+		<name>Emergya</name>
+		<url>http://www.emergya.es</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>adiaz</id>
+			<name>Alejandro Diaz Torres</name>
+			<email>adiaz@emergya.com</email>
+			<organization>Emergya Consultoria</organization>
+			<organizationUrl>http://www.emergya.es</organizationUrl>
+			<roles>
+				<role>Analista</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>jlrodriguez</id>
+			<name>Juan Luis Rodriguez Ponce</name>
+			<email>jlrodriguez@emergya.com</email>
+			<organization>Emergya Consultoria</organization>
+			<organizationUrl>http://www.emergya.es</organizationUrl>
+			<roles>
+				<role>Analista Funcional</role>
+			</roles>
+		</developer>
+	</developers>
+
+
+	<issueManagement>
+		<system>redmine</system>
+		<url>https://redmine.emergya.es/projects/sir-gore-chile</url>
+	</issueManagement>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://jenkins.emergya.es/jenkins/view/ohiggins/</url>
+	</ciManagement>
+	<inceptionYear>2012</inceptionYear>
+	<!-- Project Information -->
+
+
+	<!-- Environment Information -->
+	<scm>
+		<connection>scm:git:git@github.com:Emergya/sir-ohiggins.git</connection>
+		<developerConnection>scm:git:git@github.com:Emergya/sir-ohiggins.git</developerConnection>
+		<url>scm:git:git@github.com:Emergya/sir-ohiggins.git</url>
+	</scm>
+
+
+	<distributionManagement>
+		<!-- use the following if you're not using a snapshot version. -->
+		<repository>
+			<id>nexus.releases</id>
+			<name>Nexus Releases</name>
+			<url>http://nexus.emergya.es/nexus/content/repositories/ohiggins-repo/</url>
+		</repository>
+		<!-- use the following if you ARE using a snapshot version. -->
+		<snapshotRepository>
+			<id>nexus.snapshots</id>
+			<name>Nexus Snapshot</name>
+			<url>http://nexus.emergya.es/nexus/content/repositories/ohiggins-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>thirdparty</id>
+			<url>http://nexus.emergya.es/nexus/content/repositories/thirdparty</url>
+		</repository>
+		<repository>
+			<id>jboss-repo</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+		<repository>
+			<id>spring-repo</id>
+			<url>http://maven.springframework.org</url>
+		</repository>
+
+		<!-- Hibernate Spatial -->
+		<repository>
+			<id>OSGEO GeoTools repo</id>
+			<url>http://download.osgeo.org/webdav/geotools</url>
+		</repository>
+		<repository>
+			<id>Hibernate Spatial repo</id>
+			<url>http://www.hibernatespatial.org/repository</url>
+		</repository>
+		<repository>
+			<id>JBOSS</id>
+			<url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>terracotta-releases</id>
+			<url>http://www.terracotta.org/download/reflector/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		
+		<!-- KML -->
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Maven 2 Repository</name>
+			<url>http://download.java.net/maven/2</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- SPRING DEPENDENCIES -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--Misc dependencies -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- HIBERNATE DEPENDENCIES -->
+
+		<dependency>
+			<groupId>org.hibernatespatial</groupId>
+			<artifactId>hibernate-spatial-postgis</artifactId>
+			<version>1.1.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>hibernate-core</artifactId>
+					<groupId>org.hibernate</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>postgresql</artifactId>
+					<groupId>postgresql</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<!-- PostgreSQL -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+
+		<!-- Validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.0.Final</version>
+		</dependency>
+
+		<!-- LOGGING DEPENDENCIES - LOG4J -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.4.8</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.emergya</groupId>
+			<artifactId>persistence-geo-core</artifactId>
+			<version>${persistencegeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.emergya</groupId>
+			<artifactId>persistence-geo-geoserver</artifactId>
+			<version>${persistencegeo.version}</version>
+		</dependency>
+		<!-- jcl-over-slf4j correct geoserver-manager dependency version -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+
+		<!-- Excel Files -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<!-- Shape Files depends on Geotools -->
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-shapefile</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-epsg-hsql</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		<!-- Dependencias para KML -->
+		<dependency>
+	      <groupId>de.micromata.jak</groupId>
+	      <artifactId>JavaAPIforKml</artifactId>
+	      <version>2.2.0</version>
+	   </dependency>
+		<!-- Geotiff class from Geotools -->
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-geotiff</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		<!-- Provides support for PostGIS. Note the different groupId -->
+		<dependency>
+			<groupId>org.geotools.jdbc</groupId>
+			<artifactId>gt-jdbc-postgis</artifactId>
+			<version>${geotools.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>postgresql</artifactId>
+					<groupId>postgresql</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+			<version>1.5.3</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.geolatte</groupId>
+			<artifactId>geolatte-common</artifactId>
+			<version>0.5.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jmock</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.vividsolutions</groupId>
+					<artifactId>jts</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.codehaus.jackson</groupId>
+					<artifactId>jackson-mapper-lgpl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.flyway</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+		
+			<!-- Detect mime-type -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.alfresco.cmis.client</groupId>
+			<artifactId>alfresco-opencmis-extension</artifactId>
+			<version>0.4</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+
+		<filters>
+			<filter>src/main/filters/${filter.profile}</filter>
+		</filters>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+				<targetPath>../test-classes</targetPath>
+			</testResource>
+
+		</testResources>
+
+		<plugins>
+			<plugin>
+				<groupId>com.googlecode.flyway</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>2.0.3</version>
+				<configuration>
+					<driver>${jdbc.driverClassName}</driver>
+					<url>${jdbc.url}</url>
+					<user>${jdbc.username}</user>
+					<password>${jdbc.password}</password>
+					<schemas>
+						<schema>${jdbc.schema}</schema>
+					</schemas>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<escapeString>\</escapeString>
+				</configuration>
+			</plugin>
+			<plugin>
+
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>dbunit-maven-plugin</artifactId>
+				<version>1.0-beta-3</version>
+
+				<!--jar file that has the jdbc driver -->
+				<dependencies>
+					<dependency>
+						<groupId>postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>${postgresql.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- ================= Profiles to deploy ================= -->
+		<profile>
+			<id>local</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+                                <jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+                                <jdbc.url>jdbc:postgresql://localhost:5432/ohiggins_db</jdbc.url>
+                                <jdbc.username>ohiggins</jdbc.username>
+                                <jdbc.password>ohiggins</jdbc.password>
+                                <jdbc.schema>ohiggins</jdbc.schema>
+				<filter.profile>local.properties</filter.profile>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>test</id>
+			<properties>
+				<jdbc.driverClassName>org.hsqldb.jdbcDriver</jdbc.driverClassName>
+				<jdbc.url>jdbc:hsqldb:mem:testDB</jdbc.url>
+				<jdbc.username>sa</jdbc.username>
+				<jdbc.password />
+				<hibernate.dialect>org.hibernate.dialect.HSQLDialect</hibernate.dialect>
+				<hibernate.hbm2ddl.auto>create</hibernate.hbm2ddl.auto>
+				<hibernate.show_sql>true</hibernate.show_sql>
+				<filter.profile>local.properties</filter.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>devel</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://postgresql-apps.emergya.es:5434/ohiggins_db</jdbc.url>
+				<jdbc.username>ohiggins</jdbc.username>
+				<jdbc.password>ohiggins</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+
+				<filter.profile>devel.properties</filter.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>ohiggins-devel</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://postgresql-apps.emergya.es:5434/ohiggins_db</jdbc.url>
+				<jdbc.username>ohiggins</jdbc.username>
+				<jdbc.password>ohiggins</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+
+				<filter.profile>ohiggins-devel.properties</filter.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://postgresql-apps.emergya.es:5434/ohiggins_db_pre</jdbc.url>
+				<jdbc.username>ohiggins</jdbc.username>
+				<jdbc.password>ohiggins</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+				<filter.profile>pre.properties</filter.profile>
+			</properties>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+		</profile>
+		<!-- NUEVO -->
+		<profile>
+			<id>subdere-devel</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://subdere-sir.emergya.es:5432/subdere_db</jdbc.url>
+				<jdbc.username>subdere</jdbc.username>
+				<jdbc.password>subdere</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+				<filter.profile>subdere-devel.properties</filter.profile>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<!-- FIN NUEVO -->
+		<profile>
+			<id>produccion</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://10.0.0.42/ohiggins_db</jdbc.url>
+				<jdbc.username>ohiggins</jdbc.username>
+				<jdbc.password>ohigg1ns_pgGIS</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+				<filter.profile>produccion.properties</filter.profile>
+			</properties>
+		</profile>
+		<profile>
+			<id>minem</id>
+			<properties>
+				<!-- Database validate -->
+				<database.hibernate.hbm2ddl.auto>validate</database.hibernate.hbm2ddl.auto>
+				<jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:postgresql://localhost/minem_db</jdbc.url>
+				<jdbc.username>ohiggins</jdbc.username>
+				<jdbc.password>ohiggins</jdbc.password>
+				<jdbc.schema>ohiggins</jdbc.schema>
+				<filter.profile>minem.properties</filter.profile>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definition of Knowledge Base Model -->
+<!-- /opt/alfresco-4.0.e/tomcat/shared/classes/alfresco/extension/publicacionModel.xml -->
+
+<model name="ohg:model" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"               
+       xsi:schemaLocation="http://www.alfresco.org/model/dictionary/1.0 ../../../../webapps/alfresco/WEB-INF/classes/alfresco/model/modelSchema.xsd"      
+       xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <!-- Optional meta-data about the model -->
+   <description>Publicacion</description>
+   <author>Juan Luis Rodriguez Ponce</author>
+   <version>1.0</version>
+
+   <!-- Imports are required to allow references to definitions in other models -->
+   <imports>
+      <!-- Import Alfresco Dictionary Definitions -->
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+   </imports>
+
+   <!-- Introduction of new namespaces defined by this model -->
+   <namespaces>
+      <namespace uri="ohg.model" prefix="ohg"/>
+   </namespaces>
+
+    <aspects>
+      <!-- Definition of new Content Aspect: Knowledge Base Document -->
+      <aspect name="ohg:publicacion">
+         <title>GIS Publicacion</title>
+         <properties>
+            <property name="ohg:maintFreq">
+               <type>d:text</type>
+	       <index enabled="true"> 
+                   <tokenised>both</tokenised> 
+               </index> 
+            </property>
+            <property name="ohg:dateNext">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised> 
+               </index> 
+            </property>
+            <property name="ohg:usrDefFreq">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:maintScp">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:upScpDesc">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:maintCont">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:maintNode">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:distFormat">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:distributor">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:distTranOps">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:anyo">
+               <type>d:int</type>
+            </property>
+            <property name="ohg:sector">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:nivelTerritorial">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:nombre">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:autor">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:institucion">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:resumen">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:estado">
+		<type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+	    </property>
+            <property name="ohg:usuario">
+                <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:solicitud">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:respuesta">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohg:comentario">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index>
+            </property>
+         </properties>
+      </aspect>
+   </aspects>
+
+</model>

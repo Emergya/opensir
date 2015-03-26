@@ -1,0 +1,78 @@
+/* Iconos de p.invoke */
+
+/* Estilo para columnas que sólo tienen un icono.*/
+.iconColumn {
+	text-align: center;
+	width: 3em;
+}
+
+.icon {
+	background-repeat: no-repeat;	
+	background-size: 25px;
+}
+
+.icon.textless {
+	text-indent: -100000px;
+	display: inline-block;
+	height: 25px;
+        width: 25px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.icon.arrowUp {
+	background-image: url('../../img/arrowUp.png');
+}
+
+.icon.arrowDown {
+	background-image: url('../../img/arrowDown.png');
+}
+
+.icon.remove {
+	background-image: url('../../img/cross.png');
+}
+
+.icon.add {
+	background-image: url('../../img/plus.png');
+}
+
+.icon.download {
+	background-image: url('../../img/descargar.png');
+}
+
+.icon.view {
+	background-image: url('../../img/lupa.png');
+}
+
+.icon.delete {
+	background-image: url('../../img/borrar.png');
+}
+
+.icon.addSubElement {
+	background-image: url('../../img/nuevoSubcanal.png');
+}
+
+.icon.edit {
+	background-image: url('../../img/editar.png');
+}
+	
+.icon.publish {
+	background-image: url('../../img/publicar.png');	
+}
+
+.icon.ok {	
+	background-image: url('../../img/ok.png');	
+}
+
+.icon.cancel {
+	background-image: url('../../img/cruz.png');	
+}
+
+.icon.eye {
+	background-image: url('../../img/ver.png');	
+}
+
+.icon.metadata {
+	background-image: url('../../img/vermetadatos.png');	
+}

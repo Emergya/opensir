@@ -1,0 +1,1 @@
+ALTER TABLE ohiggins.gis_permission DROP COLUMN name_permission;

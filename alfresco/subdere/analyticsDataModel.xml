@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definition of Knowledge Base Model -->
+
+<model name="ohgA:analyticsModel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"               
+       xsi:schemaLocation="http://www.alfresco.org/model/dictionary/1.0 ../../../../webapps/alfresco/WEB-INF/classes/alfresco/model/modelSchema.xsd"      
+       xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <!-- Optional meta-data about the model -->
+   <description>Analytics Data Model</description>
+   <author>Luis Román Gutiérrez</author>
+   <version>1.0</version>
+
+   <!-- Imports are required to allow references to definitions in other models -->
+   <imports>
+      <!-- Import Alfresco Dictionary Definitions -->
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <!-- Import Alfresco Content Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+   </imports>
+
+   <!-- Introduction of new namespaces defined by this model -->
+   <namespaces>
+      <namespace uri="ohgA.analyticsModel" prefix="ohgA"/>
+   </namespaces>
+
+    <aspects>
+      <!-- Definition of new Content Aspect: Knowledge Base Document -->
+      <aspect name="ohgA:analytics_data">
+         <title>GIS Analytics Module Data</title>
+         <properties>
+            <property name="ohgA:name">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:description">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:institutionId">
+               <type>d:int</type>
+               <index enabled="true">                  
+               </index> 
+            </property>	                  
+	    <property name="ohgA:categoryId">
+               <type>d:int</type>
+               <index enabled="true">                  
+               </index> 
+            </property>	    
+            <property name="ohgA:geoContextId">
+               <type>d:int</type>
+	       <index enabled="true">
+               </index> 
+            </property>
+            <property name="ohgA:author">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:license">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>           
+            <property name="ohgA:state">
+		<type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+	    </property>
+	    <property name="ohgA:updatedDataIdentifier">
+		<type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+	    </property>
+	   <property name="ohgA:updatedDataName">
+		<type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+	    </property>
+            <property name="ohgA:user">
+                <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:requestDate">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:publicationDate">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:requestAnswerDate">
+               <type>d:date</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index> 
+            </property>
+            <property name="ohgA:requestAnswer">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index>
+            </property>
+	    <property name="ohgA:tags">
+               <type>d:text</type>
+               <index enabled="true">
+                   <tokenised>both</tokenised>
+               </index>
+            </property>
+         </properties>
+      </aspect>
+   </aspects>
+
+</model>

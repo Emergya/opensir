@@ -1,0 +1,228 @@
+<alfresco-config>
+   
+   <!-- Repository Library config section -->
+   <config evaluator="string-compare" condition="RepositoryLibrary" replace="true">
+      <!--
+         Whether the link to the Repository Library appears in the header component or not.
+      -->
+      <visible>true</visible>
+   </config>
+
+   <config evaluator="string-compare" condition="Remote">
+      <remote>
+         <endpoint>
+            <id>alfresco-noauth</id>
+            <name>Alfresco - unauthenticated access</name>
+            <description>Access to Alfresco Repository WebScripts that do not require authentication</description>
+            <connector-id>alfresco</connector-id>
+            <endpoint-url>http://localhost:9090/alfresco/s</endpoint-url>
+            <identity>none</identity>
+         </endpoint>
+
+         <endpoint>
+            <id>alfresco</id>
+            <name>Alfresco - user access</name>
+            <description>Access to Alfresco Repository WebScripts that require user authentication</description>
+            <connector-id>alfresco</connector-id>
+            <endpoint-url>http://localhost:9090/alfresco/s</endpoint-url>
+            <identity>user</identity>
+         </endpoint>
+
+         <endpoint>
+            <id>alfresco-feed</id>
+            <name>Alfresco Feed</name>
+            <description>Alfresco Feed - supports basic HTTP authentication via the EndPointProxyServlet</description>
+            <connector-id>http</connector-id>
+            <endpoint-url>http://localhost:9090/alfresco/s</endpoint-url>
+            <basic-auth>true</basic-auth>
+            <identity>user</identity>
+         </endpoint>
+         
+         <endpoint>
+            <id>activiti-admin</id>
+            <name>Activiti Admin UI - user access</name>
+            <description>Access to Activiti Admin UI, that requires user authentication</description>
+            <connector-id>activiti-admin-connector</connector-id>
+            <endpoint-url>http://localhost:9090/alfresco/activiti-admin</endpoint-url>
+            <identity>user</identity>
+         </endpoint>
+      </remote>
+   </config>
+<!-- Document Library config section -->
+   <config evaluator="string-compare" condition="RepositoryLibrary">
+
+      <!--
+         Used by the "Manage Aspects" action
+
+         For custom aspects, remember to also add the relevant i18n string(s)
+            cm_myaspect=My Aspect
+      -->
+      <aspects>
+         <!-- Aspects that a user can see -->
+         <visible>
+            <aspect name="ohg:publicacion" />
+	    <aspect name="ohgA:analytics_data"/>
+         </visible>
+
+         <!-- Aspects that a user can add. Same as "visible" if left empty -->
+         <addable>
+            <aspect name="ohg:publicacion" />
+	    <aspect name="ohgA:analytics_data"/>
+         </addable>
+
+         <!-- Aspects that a user can remove. Same as "visible" if left empty -->
+         <removeable>
+         </removeable>
+      </aspects>
+
+   </config>
+
+   <!-- cm:content type (existing nodes) -->
+   <config  evaluator="aspect" condition="ohg:publicacion">
+      <forms>
+         <!-- Default form configuration used on the document details and edit metadata pages -->
+         <form>
+            <field-visibility>
+                <show id="ohg:maintFreq"/>
+                <show id="ohg:dateNext"/>
+                <show id="ohg:usrDefFreq"/>
+                <show id="ohg:maintScp"/>
+                <show id="ohg:upScpDesc"/>
+                <show id="ohg:maintCont"/>
+                <show id="ohg:maintNode"/>
+                <show id="ohg:distFormat"/>
+                <show id="ohg:distributor"/>
+                <show id="ohg:distTranOps"/>
+                <show id="ohg:anyo"/>
+                <show id="ohg:sector"/>
+                <show id="ohg:nivelTerritorial"/>
+                <show id="ohg:nombre"/>
+                <show id="ohg:autor"/>
+                <show id="ohg:institucion"/>
+                <show id="ohg:resumen"/>
+                <show id="ohg:estado" />
+                <show id="ohg:usuario" />
+            </field-visibility>
+         </form>
+
+         <!-- Document Library pop-up Edit Metadata form -->
+         <form id="doclib-simple-metadata">
+            <field-visibility>
+                <show id="ohg:maintFreq"/>
+                <show id="ohg:dateNext"/>
+                <show id="ohg:usrDefFreq"/>
+                <show id="ohg:maintScp"/>
+                <show id="ohg:upScpDesc"/>
+                <show id="ohg:maintCont"/>
+                <show id="ohg:maintNode"/>
+                <show id="ohg:distFormat"/>
+                <show id="ohg:distributor"/>
+                <show id="ohg:distTranOps"/>
+                <show id="ohg:anyo"/>
+                <show id="ohg:sector"/>
+                <show id="ohg:nivelTerritorial"/>
+                <show id="ohg:nombre"/>
+                <show id="ohg:autor"/>
+                <show id="ohg:institucion"/>
+                <show id="ohg:resumen"/>
+                <show id="ohg:estado" />
+                <show id="ohg:usuario" />
+            </field-visibility>
+            <edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl" />
+         </form>
+
+         <!-- Document Library Inline Edit form -->
+         <form id="doclib-inline-edit">
+            <field-visibility>
+                <show id="ohg:maintFreq"/>
+                <show id="ohg:dateNext"/>
+                <show id="ohg:usrDefFreq"/>
+                <show id="ohg:maintScp"/>
+                <show id="ohg:upScpDesc"/>
+                <show id="ohg:maintCont"/>
+                <show id="ohg:maintNode"/>
+                <show id="ohg:distFormat"/>
+                <show id="ohg:distributor"/>
+                <show id="ohg:distTranOps"/>
+                <show id="ohg:anyo"/>
+                <show id="ohg:sector"/>
+                <show id="ohg:nivelTerritorial"/>
+                <show id="ohg:nombre"/>
+                <show id="ohg:autor"/>
+                <show id="ohg:institucion"/>
+                <show id="ohg:resumen"/>
+                <show id="ohg:estado" />
+                <show id="ohg:usuario" />
+            </field-visibility>
+         </form>
+      </forms>
+   </config>
+
+   <config  evaluator="aspect" condition="ohgA:analytics_data">
+      <forms>
+         <!-- Default form configuration used on the document details and edit metadata pages -->
+         <form>
+            <field-visibility>
+                 <show id="ohgA:name"/>
+                <show id="ohgA:description"/>
+                <show id="ohgA:institutionId"/>               
+                <show id="ohgA:categoryId"/>
+                <show id="ohgA:geoContextId"/>
+                <show id="ohgA:author"/>
+                <show id="ohgA:license"/>
+                <show id="ohgA:state"/>
+                <show id="ohgA:requestDate"/>
+                <show id="ohgA:publicationDate"/>
+                <show id="ohgA:requestAnswerDate"/>
+                <show id="ohgA:requestAnswer"/>
+		<show id="ohgA:updatedDataIdentifier"/>
+		<show id="ohgA:updatedDataName"/>
+		<show id="ohgA:tags"/>
+            </field-visibility>
+         </form>
+
+         <!-- Document Library pop-up Edit Metadata form -->
+         <form id="doclib-simple-metadata">
+            <field-visibility>
+                 <show id="ohgA:name"/>
+                <show id="ohgA:description"/>
+                <show id="ohgA:institutionId"/>               
+                <show id="ohgA:categoryId"/>
+                <show id="ohgA:geoContextId"/>
+                <show id="ohgA:author"/>
+                <show id="ohgA:license"/>
+                <show id="ohgA:state"/>
+                <show id="ohgA:requestDate"/>
+                <show id="ohgA:publicationDate"/>
+                <show id="ohgA:requestAnswerDate"/>
+                <show id="ohgA:requestAnswer"/>
+		<show id="ohgA:updatedDataIdentifier"/>
+		<show id="ohgA:updatedDataName"/>
+		<show id="ohgA:tags"/>
+            </field-visibility>
+            <edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl" />
+         </form>
+
+         <!-- Document Library Inline Edit form -->
+         <form id="doclib-inline-edit">
+            <field-visibility>
+                <show id="ohgA:name"/>
+                <show id="ohgA:description"/>
+                <show id="ohgA:institutionId"/>               
+                <show id="ohgA:categoryId"/>
+                <show id="ohgA:geoContextId"/>
+                <show id="ohgA:author"/>
+                <show id="ohgA:license"/>
+                <show id="ohgA:state"/>
+                <show id="ohgA:requestDate"/>
+                <show id="ohgA:publicationDate"/>
+                <show id="ohgA:requestAnswerDate"/>
+                <show id="ohgA:requestAnswer"/>
+		<show id="ohgA:updatedDataIdentifier"/>
+		<show id="ohgA:updatedDataName"/>
+		<show id="ohgA:tags"/>
+            </field-visibility>
+         </form>
+      </forms>
+   </config>
+</alfresco-config>

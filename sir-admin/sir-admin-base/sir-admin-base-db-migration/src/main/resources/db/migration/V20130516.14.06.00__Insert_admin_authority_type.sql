@@ -1,0 +1,1 @@
+INSERT INTO ohiggins.gis_authority_type VALUES (5, true, '2013-05-16 14:00:49.250453', 'Administrador', '2013-05-16 14:00:49.250453');

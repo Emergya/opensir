@@ -1,0 +1,102 @@
+<alfresco-config>
+   <config evaluator="aspect-name" condition="ohg:publicacion">
+      <property-sheet>
+         <show-property name="ohg:maintFreq"/>
+         <show-property name="ohg:dateNext"/>
+         <show-property name="ohg:usrDefFreq"/>
+         <show-property name="ohg:maintScp"/>
+         <show-property name="ohg:upScpDesc"/>
+         <show-property name="ohg:maintCont"/>
+         <show-property name="ohg:maintNode"/>
+         <show-property name="ohg:distFormat"/>
+         <show-property name="ohg:distributor"/>
+         <show-property name="ohg:distTranOps"/>
+         <show-property name="ohg:anyo"/>
+         <show-property name="ohg:sector"/>
+         <show-property name="ohg:nivelTerritorial"/>
+         <show-property name="ohg:nombre"/>
+         <show-property name="ohg:autor"/>
+         <show-property name="ohg:institucion"/>
+         <show-property name="ohg:resumen"/>
+         <show-property name="ohg:estado" />
+	 <show-property name="ohg:usuario" />
+         <show-property name="ohg:solicitud" />
+         <show-property name="ohg:respuesta" />
+         <show-property name="ohg:comentario" />
+      </property-sheet>
+   </config>
+   <config evaluator="aspect-name" condition="ohgA:analytics_data">
+      <property-sheet>
+        <show-property name="ohgA:name"/>
+        <show-property name="ohgA:description"/>
+        <show-property name="ohgA:institutionId"/>
+        <show-property name="ohgA:categoryId"/>
+        <show-property name="ohgA:geoContextId"/>
+        <show-property name="ohgA:author"/>
+        <show-property name="ohgA:license"/>
+        <show-property name="ohgA:state"/>
+        <show-property name="ohgA:requestDate"/>
+        <show-property name="ohgA:publicationDate"/>
+        <show-property name="ohgA:requestAnswerDate"/>
+        <show-property name="ohgA:requestAnswer"/>
+        <show-property name="ohgA:updatedDataIdentifier"/>
+        <show-property name="ohgA:updatedDataName"/>
+        <show-property name="ohgA:tags"/>
+      </property-sheet>
+   </config>
+
+   <config evaluator="string-compare" condition="Action Wizards">
+      <aspects>
+         <aspect name="ohg:publicacion"/>
+	 <aspect name="ohgA:analytics_data"/>
+      </aspects>
+   </config>
+
+   <config evaluator="string-compare" condition="Advanced Search">
+      <advanced-search>
+         <content-aspect>
+            <aspect name="ohg:publicacion" />
+            <aspect name="ohgA:analytics_data"/>
+         </content-aspect>
+         <custom-properties>
+            <meta-data type="ohg:publicacion" property="ohg:maintFreq" />
+            <meta-data type="ohg:publicacion" property="ohg:dateNext" />
+            <meta-data type="ohg:publicacion" property="ohg:usrDefFreq" />
+            <meta-data type="ohg:publicacion" property="ohg:maintScp" />
+            <meta-data type="ohg:publicacion" property="ohg:upScpDesc" />
+            <meta-data type="ohg:publicacion" property="ohg:maintCont" />
+            <meta-data type="ohg:publicacion" property="ohg:maintNode" />
+            <meta-data type="ohg:publicacion" property="ohg:distFormat" />
+            <meta-data type="ohg:publicacion" property="ohg:distributor" />
+            <meta-data type="ohg:publicacion" property="ohg:distTranOps" />
+            <meta-data type="ohg:publicacion" property="ohg:anyo" />
+            <meta-data type="ohg:publicacion" property="ohg:sector" />
+            <meta-data type="ohg:publicacion" property="ohg:nivelTerritorial" />
+            <meta-data type="ohg:publicacion" property="ohg:nombre" />
+            <meta-data type="ohg:publicacion" property="ohg:autor" />
+            <meta-data type="ohg:publicacion" property="ohg:institucion" />
+            <meta-data type="ohg:publicacion" property="ohg:resumen" />
+            <meta-data type="ohg:publicacion" property="ohg:estado" />
+            <meta-data type="ohg:publicacion" property="ohg:usuario" />
+            <meta-data type="ohg:publicacion" property="ohg:solicitud" />
+            <meta-data type="ohg:publicacion" property="ohg:respuesta" />
+            <meta-data type="ohg:publicacion" property="ohg:comentario" />
+	    <meta-data type="ohgA:analytics_data" property="ohgA:name"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:description"/>
+            <meta-data type="ohgA:analytics_data" property="ohgA:institutionId"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:categoryId"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:geoContextId"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:author"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:license"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:state"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:requestDate"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:publicationDate"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:requestAnswerDate"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:requestAnswer"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:updatedDataIdentifier"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:updatedDataName"/>
+	    <meta-data type="ohgA:analytics_data" property="ohgA:tags"/>
+         </custom-properties>
+      </advanced-search>
+   </config>
+</alfresco-config>

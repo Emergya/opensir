@@ -1,0 +1,92 @@
+dpis: [75, 150, 300]
+
+scales:
+    - 1066
+    - 2133
+    - 4265
+    - 8531
+    - 17062
+    - 34124
+    - 68247
+    - 136494
+    - 272989
+    - 545978
+    - 1091955
+    - 2183911
+    - 4367821
+    - 8735643
+    - 17471286
+    - 34942572
+    - 69885143
+    - 139770286
+    - 279540573
+    - 559081146
+
+hosts:
+    - !localMatch
+        dummy: true
+    - !ipMatch
+        ip: 0.0.0.0
+        mask: 0.0.0.0
+
+layouts:
+
+    MAP:
+       mainPage:
+            pageSize: 700 700
+            marginTop: 0
+            marginLeft: 0
+            marginRight: 0
+            marginBottom: 0
+            rotation: true
+            items:
+                - !map
+                    width: 700
+                    height: 699
+                    align: center
+                - !columns
+                    widths: [325]
+                    absoluteX: 25
+                    absoluteY: 50
+                    width: 325
+                    items:
+                        - !scalebar
+                            type: bar
+                            maxSize: 200
+                            barBgColor: white
+                            fontSize: 12
+                            align: left
+                            vertAlign: bottom
+                - !columns
+                    widths: [80]
+                    absoluteX: 595
+                    absoluteY: 90
+                    width: 80
+                    items:
+                        - !image
+                            maxHeight: 80
+                            align: right
+                            url: "http://localhost:8080/sir-subdere/moduloCartografico/theme/ux/img/compasses/${bottomRightArrowImageName}.png"
+                            condition: bottomRightArrowImageName
+                - !columns
+                    widths: [80]
+                    absoluteX: 595
+                    absoluteY: 675
+                    width: 80
+                    items:
+                        - !image
+                            maxHeight: 80
+                            align: right
+                            url: "http://localhost:8080/sir-subdere/moduloCartografico/theme/ux/img/compasses/${topRightArrowImageName}.png"
+                            condition: topRightArrowImageName
+                - !columns
+                    widths: [80]
+                    absoluteX: 25
+                    absoluteY: 675
+                    width: 80
+                    items:
+                        - !image
+                            maxHeight: 80
+                            align: right
+                            url: "http://localhost:8080/sir-subdere/moduloCartografico/theme/ux/img/compasses/${topLeftArrowImageName}.png"
+                            condition: topLeftArrowImageName
