@@ -1,0 +1,47 @@
+<decorators defaultdir="/WEB-INF/jsp/decorators">
+
+    <!--if some pages to be excluded from decoration-->
+    <excludes>
+        <pattern>/rest/*</pattern> 
+        <pattern>/moduloCartografico/*</pattern>
+	    <pattern>/cartografico/estado/*</pattern>
+        <pattern>/admin/cartografico/estado/*</pattern>
+        <pattern>/admin/cartografico/publicarLayer/*</pattern>
+        <pattern>/admin/cartografico/rechazarPublicacion/*</pattern>
+        <pattern>/fichaInversion/*</pattern>
+        <pattern>/cartografico/nuevaSubcarpeta/*</pattern>
+        <pattern>/cartografico/listZones/*</pattern>
+        <pattern>/repositorioEstudios/verDetalle</pattern>        
+        <pattern>/repositorioEstudios/verDetalle/*</pattern>
+        <pattern>/gestionEstudios/verDetalle</pattern>
+        <pattern>/gestionEstudios/verDetalle/*</pattern>        
+        <pattern>/admin/cartografico/mostrarMetadatos</pattern>
+        <pattern>/admin/cartografico/mostrarMetadatos/*</pattern>
+        <pattern>/visor-api/mostrarMetadatosDeCapa/*</pattern>
+        <pattern>/uploadShp/*</pattern>
+        <pattern>/uploadKml/*</pattern>
+        <pattern>/uploadXls/*</pattern>
+        <pattern>/uploadRasterFile</pattern>
+    </excludes>
+    
+    <!-- <decorator name="rest" page="rest.jsp">
+        <pattern>/rest/*</pattern>
+    </decorator> -->
+	<decorator name="masterSinTabs" page="masterSinTabs.jsp">
+          <pattern>/faq/faqs</pattern>
+          <pattern>/faq/faqs/*</pattern>
+          <pattern>/contacto/nuevoContacto</pattern>
+          <pattern>/contacto/salvarContacto</pattern>
+          <pattern>/repositorioEstudios</pattern>
+          <pattern>/repositorioEstudios/*</pattern>
+    </decorator>
+    
+    
+    <decorator name="withoutDecoration" page="withoutDecoration.jsp">
+    </decorator>
+    
+    <decorator name="master" page="master.jsp">
+          <pattern>/*</pattern>
+    </decorator>
+    
+</decorators>

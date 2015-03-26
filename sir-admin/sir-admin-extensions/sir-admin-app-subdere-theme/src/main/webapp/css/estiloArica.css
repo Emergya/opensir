@@ -1,0 +1,493 @@
+@CHARSET "UTF-8";
+
+@import url('blueprint/fonts/fonts.css');
+
+/* Cabecera y Footer */
+
+body {
+	font-family: 'gobclregular';
+	font-weight: normal !important;
+}
+
+#header #logo {
+	height: 120px;
+	width: 200px;
+	margin-left: 4px;
+}
+
+#header #cabecera {
+	height: 120px;
+	width: 730px;
+}
+
+#footer {
+	text-align: center;
+	overflow: hidden;
+	padding: 25px 0;
+	color: #1a151b;
+	clear: both;
+}
+
+/* Login */
+
+.login-box {
+  float: right;
+}
+
+#loginForm #user_name {
+  position: relative;
+  float: left;
+  clear: left;
+  width: 60%;
+  background-image: url("../img/user.png");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+#loginForm {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  background-image: none;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+#loginForm .line {
+  float: left;
+  color: #999;
+  background-color: white;
+  margin: 0 5px 0 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+.gecko #loginForm .line {
+  position: relative;
+  top: 2px;
+}
+
+#loginForm .line input {
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  margin: 0 5px 0 0;
+  font-size: x-small;
+  color: #999;
+  line-height: 20px;
+  padding-left: 5px;
+  height: auto;
+}
+.ie #loginForm .line input {
+  height: 20px;
+}
+
+#loginForm .botonera {
+  margin: 0;
+  padding: 0;
+  float: left; 
+}
+
+#loginForm .botonera .left_50 {
+  float: left;
+}
+
+#loginForm .botonera .right_50 {
+  float: right;
+  margin-left: 5px;
+}
+
+#loginForm .botonera .left_50 div input {
+  border: none;
+  display: block;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px;
+  background: transparent url(../img/arrow-01.png) 0 0 no-repeat;
+  z-index: 9999; 
+  position: relative;
+}
+
+#loginForm .botonera .right_50 div input {
+  border: none;
+  display: block;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px;
+  background: transparent url(../img/reset.png) 0 0 no-repeat;
+  z-index: 9999; 
+  position: relative;
+}
+
+#loginForm .botonera .right_50 div input:hover, #loginForm .botonera .left_50 div input:hover {
+  cursor: pointer;
+}
+
+#loginForm .checkbox {
+  background-color: transparent;
+  clear: both;
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-top: 5px;
+  padding-top: 5px;
+  color: white;
+  text-align: right;
+}
+
+#loginForm .checkbox p {
+  display: inline;
+  text-shadow: 1px 1px 0 #666;
+  text-transform: uppercase;
+  padding-right: 5px;
+  font-family: 'gobclbold';
+  float:right;
+  margin-top: -2px;
+}
+
+#loginForm .line.checkbox {
+	position: relative;
+	z-index: 100;
+  border-top: 1px solid white;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+#loginForm .line.checkbox p {
+  display: inline;
+  text-shadow: 1px 1px 0 #666;
+  text-transform: uppercase;
+  padding-right: 5px;
+  font-family: 'gobclbold';
+  color: #fff;
+}
+
+#header #userDiv {
+	top: 130px;
+}
+
+#user_logout a img, 
+.separator {
+	display: none;
+}
+
+#user_name {
+	width: 135px;
+	height: 22px;
+	position: relative;
+	float: left;
+	left: 320px;
+	text-align: center;
+	background: #f4f4f4 url('../img/user.png') 5px 7px no-repeat;
+	background-size: 16px;
+	border: 1px solid #999;
+	margin: 1px;
+	padding-top: 7px;
+	overflow: hidden;
+	box-shadow: #ccc 0 0 0 1px;
+}
+
+#user_name a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #666;
+	margin-left: 10px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* Menú de Pestañas Superiores */
+
+.parentTabs li a {
+	padding-bottom: 4px;
+}
+
+.subtabs li a {
+	padding: 5px 15px;
+}
+
+.tabs.parentTabs li a:hover,
+.tabs.parentTabs li.active a {
+  border-top: 2px solid #FF8700!important;
+}
+/* Contenido */
+
+.default-container {
+	margin-top: -30px;
+}
+
+#content {
+	clear: both;
+}
+
+.pestanas {
+	padding: 0;
+}
+
+/* Tablas */
+
+
+/* Pagination */
+
+.pagination {
+	padding: 0;	
+}
+
+.public.contacto h5 {
+	margin: 0 0 0 36px;
+}
+
+.public.contacto .contenidoPresentacion .botonera {
+	text-align: center;
+}
+
+button.send,
+.faq button.accept,
+.instituciones button.new,
+.usuarios button.create {
+	background: #f4f4f4 url(../img/guardar.png) no-repeat 5px 50%;
+	margin: 0 5px;
+	padding: 5px 15px 5px 30px !important;
+	font: 13px/100% 'gobclregular', Arial, Verdana, Tahoma;
+	text-transform: uppercase;
+	color: #656565;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+	border: 1px solid #fff;
+}
+
+.icon.delete,
+.icon.view,
+.icon.edit,
+.icon.download {
+	width: 26px;
+	height: 26px;
+	background-size: 26px;
+}
+
+/* General */
+
+	/* Usuarios */
+		
+		.usuarios .adm-user .span-10 {
+			width: 35px;
+		}
+
+	/* Instituciones */
+		.instituciones #authorityDto .contenidoPresentacion .span-4 {
+			width: 190px;
+		}
+		
+	/* FAQs */
+	
+		.faq #nueva-faq #titulo {
+			min-width: 89%;
+		}
+		
+		.public.faq #faq-contents > div {
+			margin: 0 20px 15px 20px;
+		}
+		.faq .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+			left: 0em;
+		}
+	
+	/* Cartografico */
+
+	/* Inversion */	
+	
+		.inversion #upload-page {
+			margin-top: 5px;
+		}
+	
+		#actualizarInversion #uploadForm {
+			padding-top: 0;
+			width: 890px;
+		}
+		
+		#actualizarInversion #uploadForm .titulo {
+			border: 0;
+			filter: none;
+		}
+		
+		
+/* Repositorio de Estudios */
+
+#content #estudioFilter div input, 
+#content #estudioFilter div select {
+	padding: 0;
+	width: 90%;
+}
+
+.gestion h4.titulo {
+	padding-top: 0;
+	font-weight: bold;
+}
+
+.gestion .cabeceraPresentacion {
+	padding-left: 20px!important;
+}
+
+.repo .cabeceraPresentacion {
+	padding: 0!important;
+}
+
+.repo h4 {
+	font-size: 15px;
+}
+
+.repo .listadoEstudios h4 {
+	margin-left: 20px;
+}
+
+.repo .title h2 {
+	font-size: 20px;
+	margin: 0 30px;
+	padding-top: 25px;
+	text-align: center;
+	border-bottom: 2px solid #f0f0f0;
+	width: auto;
+}
+
+.repo .title h3 {
+	display: none;
+}
+
+.repo #content form div input,
+.repo #content form div select {
+	width: 90%;
+	height: 25px;
+}
+
+.repo #content {
+	margin-top: 5px !important;
+}
+
+
+.indented {
+	margin-left: 20px;
+}
+
+.repo .contenidoPresentacion .span-3 {
+	width: 110px;
+	text-align: right;
+}
+
+.repo h5 {
+	width: 830px;
+	border-bottom: 2px solid #f0f0f0;
+	font-size: 14px;
+}
+
+.searchMapContainer {
+	background: #ffffff;
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+	margin: 10px auto;
+}
+
+.searchMapContainer .map {
+	zoom: 80%;
+	right: -80px;
+	top: -80px;
+
+}
+
+
+
+.searchMapContainer .provincesContainer>div>button {
+	width: 210px;
+}
+
+.ambito {
+	height: 25px;
+}
+
+.button.region {
+	color: #054e80;
+	font-size: 14px;
+	padding: 0;
+	margin-bottom: 50px;
+}
+
+.provincesContainer {
+	margin: 20px 0;
+	width: 130%;
+	float: left;
+}
+
+.first-button {
+	float: left;
+	margin-right: 20px;
+}
+
+.provincesContainer button.arica {
+	border: 1px solid #5299cb;
+	background: #c9dfef;
+	background: -moz-linear-gradient(top, #c9dfef 0%, #5299cb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9dfef), color-stop(100%,#5299cb));
+	background: -webkit-linear-gradient(top, #c9dfef 0%,#5299cb 100%);
+	background: -o-linear-gradient(top, #c9dfef 0%,#5299cb 100%);
+	background: -ms-linear-gradient(top, #c9dfef 0%,#5299cb 100%);
+	background: linear-gradient(to bottom, #c9dfef 0%,#5299cb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9dfef', endColorstr='#5299cb',GradientType=0 );
+}
+
+.button.arica, .button.parinacota {
+	display: block;
+	margin-bottom: 5px;
+	font-family: gobCLregular;
+	color: #000;
+}
+
+.provincesContainer button.button.parinacota {
+	border: 1px solid #9cc5e1;
+	background: #ecf4f9;
+	background: -moz-linear-gradient(top, #ecf4f9 0%, #9cc5e1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ecf4f9), color-stop(100%,#9cc5e1));
+	background: -webkit-linear-gradient(top, #ecf4f9 0%,#9cc5e1 100%);
+	background: -o-linear-gradient(top, #ecf4f9 0%,#9cc5e1 100%);
+	background: -ms-linear-gradient(top, #ecf4f9 0%,#9cc5e1 100%);
+	background: linear-gradient(to bottom, #ecf4f9 0%,#9cc5e1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf4f9', endColorstr='#9cc5e1',GradientType=0 );
+}
+
+.localitiesContainer {
+	margin-left: 20px;
+	height: 150px;
+	width: 525px;
+}
+
+.localitiesContainer .span-3 {
+	width: 233px;
+}
+
+.localitiesContainer li {
+	font-size: 12px;
+	white-space: nowrap;
+	margin-left: -15px;
+	color: gray;
+}
+
+.localitiesContainer li a {
+	color: gray;
+	font-size: 12px;
+}
+
+.repo #lista {
+	clear:both!important;
+}
+
+/* We hide the investment tab #86165 */
+.admin.cartografico .subtabs li.subTab:nth-child(4) {
+	display: none;
+}
+

@@ -1,0 +1,94 @@
+ .tagit {
+     border-top: 1px solid #CFCFCF;
+     border-left: 1px solid #E9E9E9;
+     border-bottom: 1px solid #E9E9E9;
+     border-right: 1px solid #EBEBEB;               
+     margin: 5px !important;
+     padding-left: 10px;
+     border-radius: 4px 4px 4px 4px;
+     -moz-border-radius: 4px 4px 4px 4px;
+     -webkit-border-radius: 4px 4px 4px 4px;
+     background: #F6F6F6;
+ }
+ 
+ /* Modulo Analitico */
+
+.analitico .ui-widget-content {
+  background: #F6F6F6;
+}
+
+.analitico .ui-icon {
+  position: relative;
+  top: 0px;
+}
+
+.analitico #datumDto span {
+  margin: 0px;
+}
+
+.analitico ul.tagit li.tagit-new {
+  padding: 0px;
+}
+
+ul.tagit li.tagit-choice .tagit-close {
+	top: 3px !important;
+}
+
+.analitico ul.tagit li {
+  margin: 0px;
+}
+
+.analitico ul.tagit li.tagit-choice-editable {
+  padding: 0px 18px 0px .25em;
+}
+
+.analitico input#enabled1 {
+  min-width: 10%;
+}
+
+.gecko .analitico input#enabled1 {
+  position: relative;
+  top: 6px;
+}
+
+.analitico textarea {
+  border-top: 1px solid #cfcfcf!important;
+  border-left: 1px solid #e9e9e9!important;
+  border-bottom: 1px solid #e9e9e9!important;
+  border-right: 1px solid #ebebeb!important;
+  width: 95%;
+}
+
+.analitico .button.pressed {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(184, 184, 184)!important;
+  color: rgb(88, 88, 88)!important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+}
+
+.analitico #content form div input {
+  width: 93%;
+}
+.analitico #content form div select {
+  width: 97%;
+}
+
+.buttons-right {
+	text-align: right;
+}
+
+#searchFormCtr,
+#searchFormToggle {
+	margin-left : 45px;
+}
+
+#searchFormCtr .buttons-container {
+	text-align: right;
+}
+
+#searchFormCtr.hidden {
+	height: 0;
+	opacity: 0;
+	padding: 0;
+	visibility: hidden;
+}

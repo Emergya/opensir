@@ -1,0 +1,100 @@
+
+/* Styles for the public page */
+#searchFormCtr  {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+#searchFormCtr.hidden {
+	height: 0;
+	opacity: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+#searchFormCtr form input {
+	width: 91%;
+}
+#searchFormCtr form select {
+	width: 96%;
+}
+
+#searchFormCtr .buttons-container {
+	text-align: right;
+	padding-right: 0;
+}
+
+.padding {
+	padding: 25px;
+}
+
+.datumPreview {
+	z-index: inherit;
+	float: left;
+	width: 30%;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.datumPreview .ui-dialog-titlebar{
+	cursor: default;	
+}
+
+
+.datumPreview .fieldRow {
+	padding: 5px;
+}
+
+.datumPreview .footer {
+	text-align: right;
+	padding: 10px 10px 0 0;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+#dataItemsCtr a.loadMore {
+	position:absolute;
+	bottom:0;
+}
+
+
+.loadMoreCtr,
+#infscr-loading {
+    display:none !important;
+}
+
+.columnHeader {
+    margin-top: 20px;
+}
+
+.tagCloudCtr {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.tagCloudCtr a {
+    text-decoration: none;
+    margin-right: 1em;
+    line-height: 1.1em;
+}
+
+#categoriesCloud.tagCloudCtr a {
+    display: block;    
+    margin-bottom: 10px;
+} 
+
+.tagCloudCtr a:hover {
+	text-decoration: underline;
+}
+
+.public textarea {
+	height: auto !important;	
+}
+
+.analitico .button.pressed {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(184, 184, 184)!important;
+  color: rgb(88, 88, 88)!important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+}

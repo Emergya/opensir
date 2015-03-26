@@ -1,0 +1,361 @@
+	/* -----------------------------------------
+	   repositorio de estudios (vista publica)
+	----------------------------------------- */
+
+
+		body.public h2,
+		body.public  h3 {
+			font-weight: bold;
+			color: #fff;
+			text-align: center;}
+		
+		body #header{
+			height: 105px;
+		}
+		body #header .container{
+			margin:0;
+			padding: 0;
+			height: 105px;
+			overflow: hidden;}
+		body.public #content{
+			margin-top: 5px !important;
+			background: #086db5; /* Old browsers */
+			background: -moz-linear-gradient(top,  #086db5 0%, #ffffff 55%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#086db5), color-stop(55%,#ffffff)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #086db5 0%,#ffffff 55%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #086db5 0%,#ffffff 55%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #086db5 0%,#ffffff 55%); /* IE10+ */
+			background: linear-gradient(to bottom,  #086db5 0%,#ffffff 55%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#086db5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		}
+		body.public .innerContent{position: relative;}
+
+		body.public .innerContent .title{}
+		
+		body.public .innerContent h2,
+		body.public .innerContent h3 {
+			font-weight: bold;
+			margin:10px 0 0;
+			padding:0;
+		}
+
+		body.public .innerContent h2 {
+			font-size:1.35em;
+		}
+
+		body.public .innerContent h3 {
+			margin: 5px 0 20px 0;
+			font-size:1.25em;
+		}
+
+			body.public .innerContent .cabeceraPresentacion {
+				padding-bottom: 0;
+				clear: both;
+			}
+
+				body.public .innerContent .cabeceraPresentacion h4 {
+					padding-bottom: 0;
+					margin: -10px 0 10px 0;
+				}
+			
+			
+			/* excepcion */
+			body.public .innerContent .contenidoPresentacion {
+				padding: 0;
+			}
+			
+			body.public .innerContent .searchMapContainer .provincesContainer>div{
+				width:211px;
+				padding:0;
+				margin:0 0 5px;}
+			body.public .innerContent .searchMapContainer .provincesContainer>div>button{
+				width:210px !important;
+				margin:0 !important;}
+
+			/* form box, results box*/
+			body.public .innerContent form#studiesSearch_form,
+			body.public .innerContent .listadoEstudios {
+				margin: 0 20px;
+				border: 1px solid #fff;
+				background: #f0f0f0; /* Old browsers */
+				background: -moz-linear-gradient(top,  #f0f0f0 0%, #ffffff 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #f0f0f0 0%,#ffffff 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #f0f0f0 0%,#ffffff 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+			}
+				body.public .innerContent .listadoEstudios {
+					width: 850px !important;
+					margin: 0 auto;
+					padding: 25px;
+				}
+
+				body.public .innerContent form#studiesSearch_form select {
+					width: 850px;
+				}
+
+				/* viene de estudios.css */
+				body.public .innerContent form#studiesSearch_form .searchMapContainer {
+					background: #ffffff; /* Old browsers */
+				}
+
+				body.public .innerContent form#studiesSearch_form .searchMapContainer .localitiesContainer li {
+					font-size: 100%;
+				}
+
+				/* special buttons */
+				.button.region,
+				.button.cachapoal,
+				.button.cardenal_caro,
+				.button.colchagua {
+					display:block;
+					min-width: 170px;
+					position: relative;
+					font-size: 15px !important;
+					font-weight: normal !important;
+					font-family: gobCLregular;
+					padding: 1px 8px 0;
+					color: #021d2f;
+					margin-bottom: 5px;
+				}
+
+				.button.region{
+					padding: 1px 8px;
+					color: #054e80;
+					font-size: 14px !important;
+					font-family: gobCLbold;}
+
+				@-moz-document url-prefix() {
+					.button.region,
+					.button.cachapoal,
+					.button.cardenal_caro,
+					.button.colchagua {
+						min-width: 200px;
+					}
+				}
+
+					.button.region:hover,
+					.button.cachapoal:hover,
+					.button.cardenal_caro:hover,
+					.button.colchagua:hover {
+						cursor: pointer;
+					}
+
+
+					.button.region {
+						font-weight: bold; 
+						border: 1px solid #086db5;
+						background: #fbfcfe; /* Old browsers */
+						background: -moz-linear-gradient(top,  #fbfcfe 0%, #d6e7f3 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfcfe), color-stop(100%,#d6e7f3)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  #fbfcfe 0%,#d6e7f3 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  #fbfcfe 0%,#d6e7f3 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  #fbfcfe 0%,#d6e7f3 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  #fbfcfe 0%,#d6e7f3 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfe', endColorstr='#d6e7f3',GradientType=0 ); /* IE6-9 */
+					}
+
+
+					.button.cachapoal {
+						border: 1px solid #5299cb;
+						background: #c9dfef; /* Old browsers */
+						background: -moz-linear-gradient(top,  #c9dfef 0%, #5299cb 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9dfef), color-stop(100%,#5299cb)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  #c9dfef 0%,#5299cb 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  #c9dfef 0%,#5299cb 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  #c9dfef 0%,#5299cb 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  #c9dfef 0%,#5299cb 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9dfef', endColorstr='#5299cb',GradientType=0 ); /* IE6-9 */
+					}
+
+
+					.button.colchagua{
+						border: 1px solid #9cc5e1;
+						background: #ecf4f9; /* Old browsers */
+						background: -moz-linear-gradient(top,  #ecf4f9 0%, #9cc5e1 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ecf4f9), color-stop(100%,#9cc5e1)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  #ecf4f9 0%,#9cc5e1 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  #ecf4f9 0%,#9cc5e1 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  #ecf4f9 0%,#9cc5e1 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  #ecf4f9 0%,#9cc5e1 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf4f9', endColorstr='#9cc5e1',GradientType=0 ); /* IE6-9 */
+					}
+
+					.button.cardenal_caro{
+						border: 1px solid #086db5;
+						background: #d7e8f3; /* Old browsers */
+						background: -moz-linear-gradient(top,  #d7e8f3 0%, #086db5 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7e8f3), color-stop(100%,#086db5)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  #d7e8f3 0%,#086db5 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  #d7e8f3 0%,#086db5 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  #d7e8f3 0%,#086db5 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  #d7e8f3 0%,#086db5 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e8f3', endColorstr='#086db5',GradientType=0 ); /* IE6-9 */
+					}
+
+
+					.button.region:before,
+					.button.cachapoal:before,
+					.button.cardenal_caro:before,
+					.button.colchagua:before {
+						content: "";
+						display: block;
+						width: 16px;
+						height: 16px;
+						position: absolute;
+						top: 0;
+						left: -24px;
+						/*background: url('../../img/magnifying-glass-16x16.png') no-repeat 0 0;*/
+
+					}
+					
+					body.public .innerContent form#studiesSearch_form .campo {
+						/*padding-left: 0;*/
+					}
+
+
+			/* resultados de la busqueda */
+			body#recursos.public .listadoEstudios {
+				width: 95%;
+				margin: 0 auto;	
+			}
+				body#recursos.public .listadoEstudios h4 {
+					margin: -10px 0 10px 0;
+				}
+
+				body#recursos.public #studies_detailsView .labelCampo {
+					width: 100%;
+					float: none;
+					display: inline-block;
+					margin: 0 0 0 0;
+					text-align: left;
+				}
+				
+				body#recursos.public #studies_detailsView .span-6 {
+					width: 55%;
+					padding: 3px 0 0 0;
+				}
+
+
+				body#recursos.public #studies_detailsView textarea:focus {
+					border: 1px #d9d9d9 solid;
+				}
+				
+				body#recursos.public #studies_detailsView div.span-10 {
+					padding-top: 3px;
+				}
+
+				body#recursos.public .icon.download {
+					width: 22px;
+					height: 22px;
+					background-size: 22px 20px;
+					background-image: url(../../img/descargar-verde.png);
+				}
+
+				body#recursos.public .icon.view {
+					width: 22px;
+					height: 22px;
+					background-size: 22px 14px;
+					background-image: url(../../img/ver.png);
+					background-position: 50% 3px;
+				}
+
+
+/* -----------------------------------------
+	   ficha de la inverión
+	----------------------------------------- */
+	#ficha-inversion {
+	  background: #fff !important;
+	}
+
+	/* #ficha-inversion * {
+	    -webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	  }*/
+
+	  #ficha-inversion .container {
+	    width: 960px;
+	    margin: 0 auto;
+	    font-size: .8em;
+	  }
+
+	    #ficha-inversion .container h1 {
+	      margin: 25px 0 0 0;
+	      padding:10px;
+	      text-transform:uppercase;
+	      font-size: 20px;
+	      color: #000;
+	      border:2pt solid #000;
+	    }
+
+	  #postulacionIniciativa,
+	  #evalTecEco,
+	  #aproRecFin,
+	  #procEjeInv {
+	    background-color: white;
+	    margin: 10px 0;
+	    overflow: hidden;
+	  }
+
+	    #ficha-inversion .container .inner {
+	      margin: 10px;
+	      overflow: hidden;
+	    }
+
+	      #ficha-inversion .container .inner label.labelInfo,
+	      #ficha-inversion .container .inner span.info {
+	        display: block;
+	        margin: 0;
+	        padding: 8px 0;
+	        float: left;
+	      }
+
+	      #ficha-inversion .container .inner label.labelInfo {
+	        width: 29.5%;
+	        font-weight: bold;
+	      }
+
+	      #ficha-inversion .container .inner span.info {
+	        width: 69.5%;
+	        float: right;
+	      }
+	    
+	      #ficha-inversion .container .inner div div {
+	        overflow: hidden;
+	      }
+
+	        #ficha-inversion .container .inner div div:hover {
+	          background-color: #eee;
+	          text-shadow: 1px 1px 0 white;
+	        }
+
+	        #ficha-inversion .container .inner div div div {
+	          overflow: inherit;
+	          border: none;
+	        }
+	        
+
+/* Pagina mensaje enviado */
+body.public .pagina-mensaje-enviado h1,
+body.public .pagina-mensaje-enviado h2,
+body.public .pagina-mensaje-enviado h3,
+body.public .pagina-mensaje-enviado h4,
+body.public .pagina-mensaje-enviado h5,
+body.public .pagina-mensaje-enviado h6,
+body.public .pagina-mensaje-enviado h7 {
+	color: #111;
+}
+body.public .innerContent .pagina-mensaje-enviado h3 {
+	font-size: 2.25em;
+}
+
+body.public .innerContent .pagina-mensaje-enviado h4 {
+	font-size: 1.5em;
+}
+
+
+/* Pagina mensaje enviado */

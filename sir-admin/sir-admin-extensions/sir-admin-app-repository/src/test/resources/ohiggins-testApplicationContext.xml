@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<context:property-placeholder
+		properties-ref="webProperties" />
+
+	<bean id="webProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:cmis.properties</value>
+				<value>classpath:application.properties</value>
+				<value>classpath:database.properties</value>
+				<value>classpath:hibernate.properties</value>
+				<value>classpath:geoserver.properties</value>
+				<value>classpath:shpDatabase.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="java.lang.String" id="NAME_ADMIN_GROUP">
+		<constructor-arg type="String" value="admin" />
+	</bean>
+
+
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.emergya.ohiggins" />
+
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/gim/" mapping="/gim/**" />
+	<mvc:resources location="/img/" mapping="/img/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+			<property name="cacheSeconds" value="0" />
+			<property name="useExpiresHeader" value="true" />
+			<property name="useCacheControlHeader" value="true" />
+			<property name="useCacheControlNoStore" value="true" />
+
+			<property name="cacheMappings">
+				<props>
+					<!-- cache for one year -->
+					<prop key="/css/**">31536000</prop>
+					<prop key="/gim/**">31536000</prop>
+					<prop key="/img/**">31536000</prop>
+					<prop key="/js/**">31536000</prop>
+				</props>
+			</property>
+		</bean>
+	</mvc:interceptors>
+
+
+	<bean class="com.emergya.persistenceGeo.utils.GsRestApiConfigurationImpl">
+		<property name="serverUrl" value="${geoserver.rest.url}" />
+		<property name="adminUsername" value="${geoserver.rest.user}" />
+		<property name="adminPassword" value="${geoserver.rest.password}" />
+		<property name="dbHost" value="${geoserver.db.host}" />
+		<property name="dbPort" value="${geoserver.db.port}" />
+		<property name="dbSchema" value="${geoserver.db.schema}" />
+		<property name="dbName" value="${geoserver.db.name}" />
+		<property name="dbUser" value="${geoserver.db.user}" />
+		<property name="dbPassword" value="${geoserver.db.password}" />
+		<property name="dbType" value="${geoserver.db.type}" />
+		<property name="jndiReferenceName" value="${geoserver.db.jndiReferenceName}" />
+		<property name="datasourceType" value="${geoserver.db.datasourceType}" />
+	</bean>
+
+	<bean
+		class="com.emergya.persistenceGeo.utils.GeographicDatabaseConfiguration">
+		<property name="postgresHost" value="${shp.database.host}" />
+		<property name="postgresPort" value="${shp.database.port}" />
+		<property name="databaseName" value="${shp.database.name}" />
+		<property name="postgresUser" value="${shp.database.user}" />
+		<property name="postgresPassword" value="${shp.database.password}" />
+		<property name="geomColumn" value="${shp.database.geomColumn}" />
+		<property name="schema" value="${shp.database.schema}" />
+		<property name="destSrid" value="${shp.database.destSRID}" />
+	</bean>
+
+	<!--<bean class="com.emergya.persistenceGeo.dao.impl.GeoserverGsManagerDaoImpl" 
+		name="geoserverDao" id="geoserverDao"> </bean> <bean class="com.emergya.persistenceGeo.service.impl.GeoserverServiceImpl" 
+		name="geoService" id="geoService"> </bean> -->
+
+	<!-- Overrides system properties for the viewer -->
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject">
+			<!-- System.getProperties() -->
+			<bean
+				class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+				<property name="targetClass" value="java.lang.System" />
+				<property name="targetMethod" value="getProperties" />
+			</bean>
+		</property>
+		<property name="targetMethod" value="putAll" />
+		<property name="arguments">
+			<!-- The new Properties -->
+			<props>
+				<prop key="app.proxy.geoserver">${app.proxy.geoserver}</prop>
+				<prop key="app.proxy.geoserver.username">${app.proxy.geoserver.username}</prop>
+				<prop key="app.proxy.geoserver.password">${app.proxy.geoserver.password}</prop>
+				<prop key="app.proxy.adminApp">${app.proxy.adminApp}</prop>
+				<prop key="app.proxy.adminApp.rest">${app.proxy.adminApp.rest}</prop>
+				<prop key="app.proxy.geoserver.internal">${app.proxy.geoserver.internal}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<import resource="classpath:ohiggins-modelContext.xml" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages" />
+		<property name="defaultEncoding" value="${source.encoding}" />
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="104857600" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- view name resolved using bean of type InternalResourceViewResolver 
+			(declared in mvc-view-config.xml) -->
+		<property name="defaultErrorView" value="exception" />
+		<!-- results into 'WEB-INF/jsp/exception.jsp' -->
+		<property name="warnLogCategory" value="warn" />
+		<!-- needed otherwise exceptions won't be logged anywhere -->
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.security.access.AccessDeniedException">accessDenied</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- JSR 303 Validator Factory Bean -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+
+	<bean class="java.lang.Boolean" id="secureRestRequest">
+		<constructor-arg value="false" />
+	</bean>
+</beans>
